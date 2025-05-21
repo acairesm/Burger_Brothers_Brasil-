@@ -5,11 +5,8 @@ import view.MenuPrincipal;
 
                 MenuPrincipal menu = new MenuPrincipal();
 
-//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
                 //oi pra todos
 
-                        //oi lore
-                        // oi andre g
                 menu.exibir();
             }
         }
