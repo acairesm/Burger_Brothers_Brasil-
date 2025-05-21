@@ -5,7 +5,7 @@
 
                 MenuPrincipal menu = new MenuPrincipal();
 
-                //oi pra todos
+                //Seus incopetentes!!
 
                 menu.exibir();
             }
