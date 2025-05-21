@@ -7,7 +7,6 @@ import view.MenuPrincipal;
 
 
 
-                        //cu
                         //oi lore
                         // oi andre g
                 menu.exibir();
