@@ -5,6 +5,10 @@ public class Main {
         menu.exibir();
 
         oi lorenzo
+                oi
+                        aslna
+                        oi adnr
+                                uc
     }
 }
 
