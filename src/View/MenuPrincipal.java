@@ -30,7 +30,7 @@ public class MenuPrincipal {
             System.out.print("Escolha uma opção: ");
             opcao = scanner.nextInt();
 
-            switch (opcao) {
+            switch (opcao) { // Extamente aqui para fazer funcionar os menus
                 case 1:
                     // Chamar MenuCliente
                     break;
