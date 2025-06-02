@@ -5,7 +5,7 @@ import model.Cliente;
 import model.Endereco;
 
 public class MenuCliente {
-    private ClienteController clienteController;
+    private final ClienteController clienteController;
 
     public MenuCliente(ClienteController clienteController) {
         this.clienteController = clienteController;
