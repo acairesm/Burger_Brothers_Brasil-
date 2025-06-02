@@ -6,7 +6,6 @@ public class Main {
     }
 }
 
-VAI TOMA NO CU
 
 
 
