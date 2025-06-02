@@ -4,11 +4,7 @@ public class Main {
         MenuPrincipal menu = new MenuPrincipal();
         menu.exibir();
 
-        oi lorenzo
-                oi
-                        aslna
-                        oi adnr
-                                uc
+
     }
 }
 
