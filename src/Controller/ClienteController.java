@@ -1,15 +1,31 @@
-package Controller;
+package controller;
 
+import model.Cliente;
 import java.util.ArrayList;
+import java.util.List;
 
-class ClienteController {
-    private List<Cliente> clientes = new ArrayList<>();
+public class ClienteController {
+    private List<Cliente> clientes;
+
+    public ClienteController() {
+        this.clientes = new ArrayList<>();
+    }
 
     public void cadastrarCliente(Cliente cliente) {
         clientes.add(cliente);
-        System.out.println("Cliente cadastrado com sucesso!");
     }
 
-    public List<Cliente> getClientes() { return clientes; }
+    public List<Cliente> listarClientes() {
+        return clientes;
+    }
+
+    public void editarCliente(Cliente cliente) {
+        // Implementar lógica para editar cliente
+    }
+
+    public void deletarCliente(Cliente cliente) {
+        clientes.remove(cliente);
+    }
 }
+
 

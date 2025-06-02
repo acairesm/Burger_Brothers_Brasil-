@@ -1,6 +1,6 @@
-package Model;
+package model;
 
-class ItemPedido {
+public class ItemPedido {
     private Produto produto;
     private int quantidade;
 
@@ -9,7 +9,14 @@ class ItemPedido {
         this.quantidade = quantidade;
     }
 
-    public Produto getProduto() { return produto; }
-    public int getQuantidade() { return quantidade; }
+    public double calcularSubtotal() {
+        return produto.getPreco() * quantidade;
+    }
+
+    @Override
+    public String toString() {
+        return "Item: " + produto.getNome() + ", Quantidade: " + quantidade + ", Subtotal: " + calcularSubtotal();
+    }
 }
+
 

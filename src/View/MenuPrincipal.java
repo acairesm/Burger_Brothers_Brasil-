@@ -1,41 +1,51 @@
-package View;
+
+package view;
 
 import java.util.Scanner;
+import controller.ClienteController;
+import controller.ProdutoController;
+import controller.PedidoController;
 
 public class MenuPrincipal {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        ClienteController clienteController = new ClienteController();
-        ProdutoController produtoController = new ProdutoController();
-        PedidoController pedidoController = new PedidoController();
-        PagamentoController pagamentoController = new PagamentoController();
+    private Scanner scanner;
+    private ClienteController clienteController;
+    private ProdutoController produtoController;
+    private PedidoController pedidoController;
 
-        while (true) {
-            System.out.println("\n=== Hamburgueria ===");
-            System.out.println("1. Cadastrar Cliente");
-            System.out.println("2. Adicionar Produto");
-            System.out.println("3. Realizar Pedido");
+    public MenuPrincipal() {
+        this.scanner = new Scanner(System.in);
+        this.clienteController = new ClienteController();
+        this.produtoController = new ProdutoController();
+        this.pedidoController = new PedidoController();
+    }
+
+    public void exibir() {
+        int opcao;
+        do {
+            System.out.println("Menu Principal:");
+            System.out.println("1. Gerenciar Clientes");
+            System.out.println("2. Gerenciar Produtos");
+            System.out.println("3. Gerenciar Pedidos");
             System.out.println("0. Sair");
             System.out.print("Escolha uma opção: ");
-            int opcao = scanner.nextInt();
-            scanner.nextLine();
+            opcao = scanner.nextInt();
 
             switch (opcao) {
                 case 1:
-                    MenuCliente.executar(scanner, clienteController);
+                    // Chamar MenuCliente
                     break;
                 case 2:
-                    MenuProduto.executar(scanner, produtoController);
+                    // Chamar MenuProduto
                     break;
                 case 3:
-                    MenuPedido.executar(scanner, clienteController, produtoController, pedidoController, pagamentoController);
+                    // Chamar MenuPedido
                     break;
                 case 0:
                     System.out.println("Saindo...");
-                    return;
+                    break;
                 default:
                     System.out.println("Opção inválida!");
             }
-        }
+        } while (opcao != 0);
     }
 }

@@ -1,7 +1,11 @@
-package Model;
+package model;
 
-abstract class Pagamento {
+public abstract class Pagamento {
     protected double valor;
-    public Pagamento(double valor) { this.valor = valor; }
-    public abstract void realizarPagamento();
+
+    public Pagamento(double valor) {
+        this.valor = valor;
+    }
+
+    public abstract void processarPagamento();
 }

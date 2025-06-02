@@ -1,16 +1,31 @@
-package Model;
+package model;
 
-class Combo extends Produto {
-    private List<Produto> itens;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Combo extends Produto {
+    private List<Produto> produtos;
 
     public Combo(String nome, double preco) {
         super(nome, preco);
-        this.itens = new ArrayList<>();
+        this.produtos = new ArrayList<>();
     }
 
-    public void adicionarProduto(Produto p) {
-        itens.add(p);
+    public void adicionarProduto(Produto produto) {
+        produtos.add(produto);
     }
 
-    public List<Produto> getItens() { return itens; }
+    @Override
+    public double getPreco() {
+        double precoTotal = 0;
+        for (Produto p : produtos) {
+            precoTotal += p.getPreco();
+        }
+        return precoTotal; // Pode aplicar desconto se necessário
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Produtos: " + produtos;
+    }
 }

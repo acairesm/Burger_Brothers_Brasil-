@@ -1,8 +1,13 @@
-package Model;
+package model;
 
-class PagamentoCartao extends Pagamento {
-    public PagamentoCartao(double valor) { super(valor); }
-    public void realizarPagamento() {
-        System.out.println("Pagamento no cartão: R$" + valor);
+public class PagamentoCartao extends Pagamento {
+    public PagamentoCartao(double valor) {
+        super(valor);
+    }
+
+    @Override
+    public void processarPagamento() {
+        System.out.println("Pagamento de " + valor + " processado via cartão.");
     }
 }
+

@@ -1,7 +1,8 @@
-package Model;
+package model;
 
-class Hamburguer extends Produto {
+public class Hamburguer extends Produto {
     public Hamburguer(String nome, double preco) {
         super(nome, preco);
     }
 }
+

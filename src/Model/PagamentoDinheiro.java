@@ -1,8 +1,13 @@
-package Model;
+package model;
 
-class PagamentoDinheiro extends Pagamento {
-    public PagamentoDinheiro(double valor) { super(valor); }
-    public void realizarPagamento() {
-        System.out.println("Pagamento em dinheiro: R$" + valor);
+public class PagamentoDinheiro extends Pagamento {
+    public PagamentoDinheiro(double valor) {
+        super(valor);
+    }
+
+    @Override
+    public void processarPagamento() {
+        System.out.println("Pagamento de " + valor + " processado em dinheiro.");
     }
 }
+
