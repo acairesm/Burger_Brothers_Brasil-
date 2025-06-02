@@ -30,18 +30,12 @@ public class MenuCliente {
     }
 
     private void cadastrarCliente() {
-        System.out.print("Nome: ");
-        String nome = scanner.next();
-        System.out.print("Telefone: ");
-        String telefone = scanner.next();
-        System.out.print("Rua: ");
-        String rua = scanner.next();
-        System.out.print("Número: ");
-        String numero = scanner.next();
-        System.out.print("Cidade: ");
-        String cidade = scanner.next();
-        System.out.print("Estado: ");
-        String estado = scanner.next();
+        String nome = InputHelper.lerString("Nome: ");
+        String telefone = InputHelper.lerString("Telefone: ");
+        String rua = InputHelper.lerString("Rua: ");
+        String numero = InputHelper.lerString("Numero: ");
+        String cidade = InputHelper.lerString("Cidade: ");
+        String estado = InputHelper.lerString("Estado: ");
 
         Endereco endereco = new Endereco(rua, numero, cidade, estado);
         Cliente cliente = new Cliente(nome, telefone, endereco);
