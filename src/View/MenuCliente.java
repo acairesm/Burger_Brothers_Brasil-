@@ -21,17 +21,10 @@ public class MenuCliente {
             opcao = InputHelper.lerInt("Escolha uma opcção");
 
             switch (opcao) {
-                case 1:
-                    cadastrarCliente();
-                    break;
-                case 2:
-                    listarClientes();
-                    break;
-                case 0:
-                    System.out.println("Voltando ao menu principal...");
-                    break;
-                default:
-                    System.out.println("Opção inválida!");
+                case 1 -> cadastrarCliente();
+                case 2 -> listarClientes();
+                case 0 -> System.out.println("Voltando ao menu principal...");
+                default -> System.out.println("Opção inválida!");
             }
         } while (opcao != 0);
     }
