@@ -1,6 +1,6 @@
-package controller;
+package Controller;
 
-import model.Pagamento;
+import Model.Pagamento;
 
 public class PagamentoController {
     public void processarPagamento(Pagamento pagamento) {

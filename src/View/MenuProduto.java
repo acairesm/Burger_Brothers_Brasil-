@@ -1,10 +1,10 @@
 package View;
 
-import controller.ProdutoController;
-import model.Produto;
-import model.Hamburguer;
-import model.Bebida;
-import model.Acompanhamento;
+import Controller.ProdutoController;
+import Model.Produto;
+import Model.Hamburguer;
+import Model.Bebida;
+import Model.Acompanhamento;
 
 public class MenuProduto {
     private ProdutoController produtoController;

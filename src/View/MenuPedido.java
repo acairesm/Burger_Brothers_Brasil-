@@ -1,11 +1,11 @@
 package View;
 
-import controller.PedidoController;
-import model.Pedido;
-import model.Cliente;
-import model.Funcionario;
-import model.ItemPedido;
-import model.Produto;
+import Controller.PedidoController;
+import Model.Pedido;
+import Model.Cliente;
+import Model.Funcionario;
+import Model.ItemPedido;
+import Model.Produto;
 
 public class MenuPedido {
 

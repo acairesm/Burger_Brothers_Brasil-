@@ -1,4 +1,4 @@
-package model;
+package Model;
 
 public class Bebida extends Produto {
     public Bebida(String nome, double preco) {

@@ -2,9 +2,9 @@
 package View;
 
 import java.util.Scanner;
-import controller.ClienteController;
-import controller.ProdutoController;
-import controller.PedidoController;
+import Controller.ClienteController;
+import Controller.ProdutoController;
+import Controller.PedidoController;
 
 public class MenuPrincipal {
     private Scanner scanner;

@@ -1,4 +1,4 @@
-package model;
+package Model;
 
 public class Funcionario extends Pessoa {
     private String cargo;

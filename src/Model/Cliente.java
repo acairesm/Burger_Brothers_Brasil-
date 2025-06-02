@@ -1,4 +1,4 @@
-package model;
+package Model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,7 @@ public class Cliente extends Pessoa {
         this.historicoPedidos = new ArrayList<>();
     }
 
-    public Cliente(String nome, String telefone, model.Endereco endereco) {
+    public Cliente(String nome, String telefone, Model.Endereco endereco) {
     }
 
     public void adicionarPedido(Pedido pedido) {

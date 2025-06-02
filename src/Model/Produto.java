@@ -1,4 +1,4 @@
-package model;
+package Model;
 public abstract class Produto implements ItemCardapio {
     protected String nome;
     protected double preco;

@@ -1,8 +1,8 @@
 package View;
 
-import controller.ClienteController;
-import model.Cliente;
-import model.Endereco;
+import Controller.ClienteController;
+import Model.Cliente;
+import Model.Endereco;
 
 public class MenuCliente {
     private final ClienteController clienteController;

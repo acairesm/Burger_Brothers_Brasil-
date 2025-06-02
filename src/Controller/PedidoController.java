@@ -1,6 +1,6 @@
-package controller;
+package Controller;
 
-import model.Pedido;
+import Model.Pedido;
 import java.util.ArrayList;
 import java.util.List;
 

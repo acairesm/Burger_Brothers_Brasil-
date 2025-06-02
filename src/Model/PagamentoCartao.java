@@ -1,4 +1,4 @@
-package model;
+package Model;
 
 public class PagamentoCartao extends Pagamento {
     public PagamentoCartao(double valor) {
