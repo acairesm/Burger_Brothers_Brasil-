@@ -39,6 +39,7 @@ public class MenuProduto {
         String nome =  InputHelper.lerString("Nome: ");
         double preco = InputHelper.lerDouble("Preço: ");
 
+        //essa parte ta mt errada provalmente tem que criar um metodo "Adicionar a lista tal ocoisa"
         Produto produto = null;
         switch (tipo) {
             case 1:
