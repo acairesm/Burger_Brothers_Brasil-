@@ -3,11 +3,8 @@ public class Main {
     public static void main(String[] args) {
         MenuPrincipal menu = new MenuPrincipal();
         menu.exibir();
-        /*nikomkom
-        /*opa aslam
-         */
 
-
+knnnl,n,n
     }
 }
 
