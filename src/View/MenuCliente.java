@@ -1,28 +1,24 @@
 package View;
 
-import java.util.Scanner;
 import controller.ClienteController;
 import model.Cliente;
 import model.Endereco;
 
 public class MenuCliente {
-    private Scanner scanner;
     private ClienteController clienteController;
 
     public MenuCliente(ClienteController clienteController) {
-        this.scanner = new Scanner(System.in);
         this.clienteController = clienteController;
     }
 
     public void exibir() {
-        int opcao;
+        int opcao = 0;
         do {
             System.out.println("Menu de Clientes:");
             System.out.println("1. Cadastrar Cliente");
             System.out.println("2. Listar Clientes");
             System.out.println("0. Voltar");
-            System.out.print("Escolha uma opção: ");
-            opcao = scanner.nextInt();
+            opcao = InputHelper.lerInt("Escolha uma opcção");
 
             switch (opcao) {
                 case 1:
