@@ -1,4 +1,7 @@
 package Controller;
 
-public class PagamentoController {
+class PagamentoController {
+    public void processarPagamento(Pagamento pagamento) {
+        pagamento.realizarPagamento();
+    }
 }

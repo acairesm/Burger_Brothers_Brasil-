@@ -1,4 +1,6 @@
 package Model;
 
-public interface ItemCardapio {
+interface ItemCardapio {
+    String getDescricao();
+    double getPreco();
 }
