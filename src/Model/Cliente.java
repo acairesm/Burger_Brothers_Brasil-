@@ -11,8 +11,7 @@ public class Cliente extends Pessoa {
         this.historicoPedidos = new ArrayList<>();
     }
 
-    public Cliente(String nome, String telefone, Model.Endereco endereco) {
-    }
+
 
     public void adicionarPedido(Pedido pedido) {
         historicoPedidos.add(pedido);
