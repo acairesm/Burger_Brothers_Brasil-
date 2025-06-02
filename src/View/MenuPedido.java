@@ -1,6 +1,5 @@
 package View;
 
-import java.util.Scanner;
 import controller.PedidoController;
 import model.Pedido;
 import model.Cliente;
@@ -9,36 +8,27 @@ import model.ItemPedido;
 import model.Produto;
 
 public class MenuPedido {
-    private Scanner scanner;
+
     private PedidoController pedidoController;
 
     public MenuPedido(PedidoController pedidoController) {
-        this.scanner = new Scanner(System.in);
         this.pedidoController = pedidoController;
     }
 
     public void exibir() {
-        int opcao;
+        int opcao=0;
         do {
             System.out.println("Menu de Pedidos:");
             System.out.println("1. Criar Pedido");
             System.out.println("2. Listar Pedidos");
             System.out.println("0. Voltar");
-            System.out.print("Escolha uma opção: ");
-            opcao = scanner.nextInt();
+            opcao = InputHelper.lerInt("Escolha uma opção:  ");
 
             switch (opcao) {
-                case 1:
-                    criarPedido();
-                    break;
-                case 2:
-                    listarPedidos();
-                    break;
-                case 0:
-                    System.out.println("Voltando ao menu principal...");
-                    break;
-                default:
-                    System.out.println("Opção inválida!");
+                case 1 -> criarPedido();
+                case 2 -> listarPedidos();
+                case 0 -> System.out.println("Voltando ao menu principal...");
+                default -> System.out.println("Opção inválida!");
             }
         } while (opcao != 0);
     }
