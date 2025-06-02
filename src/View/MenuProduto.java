@@ -1,6 +1,5 @@
 package View;
 
-import java.util.Scanner;
 import controller.ProdutoController;
 import model.Produto;
 import model.Hamburguer;
@@ -8,11 +7,9 @@ import model.Bebida;
 import model.Acompanhamento;
 
 public class MenuProduto {
-    private Scanner scanner;
     private ProdutoController produtoController;
 
     public MenuProduto(ProdutoController produtoController) {
-        this.scanner = new Scanner(System.in);
         this.produtoController = produtoController;
     }
 
@@ -23,35 +20,24 @@ public class MenuProduto {
             System.out.println("1. Cadastrar Produto");
             System.out.println("2. Listar Produtos");
             System.out.println("0. Voltar");
-            System.out.print("Escolha uma opção: ");
-            opcao = scanner.nextInt();
+            opcao = InputHelper.lerInt("Escolha uma opção ");
 
             switch (opcao) {
-                case 1:
-                    cadastrarProduto();
-                    break;
-                case 2:
-                    listarProdutos();
-                    break;
-                case 0:
-                    System.out.println("Voltando ao menu principal...");
-                    break;
-                default:
-                    System.out.println("Opção inválida!");
+                case 1 -> cadastrarProduto();
+                case 2 -> listarProdutos();
+                case 0 -> System.out.println("Voltando ao menu principal...");
+                default -> System.out.println("Opção inválida!");
             }
         } while (opcao != 0);
     }
 
     private void cadastrarProduto() {
-        System.out.println("Escolha o tipo de produto:");
         System.out.println("1. Hamburguer");
         System.out.println("2. Bebida");
         System.out.println("3. Acompanhamento");
-        int tipo = scanner.nextInt();
-        System.out.print("Nome: ");
-        String nome = scanner.next();
-        System.out.print("Preço: ");
-        double preco = scanner.nextDouble();
+        int tipo = InputHelper.lerInt("Escolha o tipo de produto: ");
+        String nome =  InputHelper.lerString("Nome: ");
+        double preco = InputHelper.lerDouble("Preço: ");
 
         Produto produto = null;
         switch (tipo) {
