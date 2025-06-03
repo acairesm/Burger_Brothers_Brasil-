@@ -4,15 +4,24 @@ package View;
 
 public class MenuPrincipal {
 
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_RED = "\u001B[31m";
+
+
     public void exibir() {
         int opcao;
         do {
-            System.out.println("Menu Principal:");
-            System.out.println("1. Gerenciar Clientes");
-            System.out.println("2. Gerenciar Produtos");
-            System.out.println("3. Gerenciar Pedidos");
-            System.out.println("0. Sair");
-            opcao = InputHelper.lerInt("Digite uma opçao :");
+            System.out.println(ANSI_BLUE + "==========================" + ANSI_RESET);
+            System.out.println(ANSI_BLUE + "       MENU PRINCIPAL" + ANSI_RESET);
+            System.out.println(ANSI_BLUE + "==========================" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "📋 [1] Gerenciar Clientes" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "🛒 [2] Gerenciar Produtos" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "📦 [3] Gerenciar Pedidos" + ANSI_RESET);
+            System.out.println(ANSI_RED + "🚪 [0] Sair" + ANSI_RESET);
+            System.out.println(ANSI_BLUE + "==========================" + ANSI_RESET);
+            opcao = InputHelper.lerInt("Digite uma opção :");
 
             switch (opcao) {
                 case 1:
@@ -25,10 +34,10 @@ public class MenuPrincipal {
                     MenuPedido.exibir();
                     break;
                 case 0:
-                    System.out.println("Saindo...");
+                    System.out.println(ANSI_GREEN + "Saindo do sistema. Até logo!" + ANSI_RESET);
                     break;
                 default:
-                    System.out.println("Opção inválida!");
+                    System.out.println(ANSI_RED + "Opção inválida! Tente novamente." + ANSI_RESET);
             }
         } while (opcao != 0);
     }
