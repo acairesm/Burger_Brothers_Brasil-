@@ -23,8 +23,8 @@ public class MenuProduto {
             switch (opcao) {
                 case 1 -> cadastrarProduto();
                 case 2 -> listarProdutos();
-                case 0 -> System.out.println("Voltando ao menu principal...");
-                default -> System.out.println("Opção inválida!");
+                case 0 -> System.out.println(ANSI_BLUE + "Voltando ao menu principal..." + ANSI_BLUE);
+                default -> System.out.println(ANSI_RED + "Opção inválida!" + ANSI_RESET);
             }
         } while (opcao != 0);
     }
@@ -52,10 +52,10 @@ public class MenuProduto {
                 String tipoAcompanhamento = InputHelper.lerString("Tipo de Acompanhamento: ");
                 ProdutoController.cadastrarAcompanhamento(nome, preco, tipoAcompanhamento);
             }
-            default -> System.out.println("Tipo de produto inválido!");
+            default -> System.out.println(ANSI_RED +"Tipo de produto inválido!" + ANSI_RESET);
         }
 
-        System.out.println("Produto cadastrado com sucesso!");
+        System.out.println(ANSI_GREEN +"Produto cadastrado com sucesso!" + ANSI_RESET);
     }
 
     private static void listarProdutos() {
