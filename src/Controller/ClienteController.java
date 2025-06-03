@@ -7,11 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ClienteController {
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_RESET = "\u001B[0m";
     private static List<Cliente> clientes = new ArrayList<>();
 
     public static void cadastrarCliente(Cliente cliente) {
         clientes.add(cliente);
-        System.out.println("Cliente cadastrado com sucesso!");
+        System.out.println(ANSI_GREEN + "Cliente cadastrado com sucesso!" + ANSI_RESET);
     }
 
     public static List<Cliente> listarClientes() {
