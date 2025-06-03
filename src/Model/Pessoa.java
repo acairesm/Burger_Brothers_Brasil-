@@ -1,11 +1,13 @@
 package Model;
 
 public abstract class Pessoa {
+    protected String cpf;
     protected String nome;
     protected String telefone;
     protected Endereco endereco;
 
-    public Pessoa(String nome, String telefone, Endereco endereco) {
+    public Pessoa(String cpf, String nome, String telefone, Endereco endereco) {
+        this.cpf=cpf;
         this.nome = nome;
         this.telefone = telefone;
         this.endereco = endereco;
@@ -20,6 +22,9 @@ public abstract class Pessoa {
 
     public Endereco getEndereco() { return endereco; }
     public void setEndereco(Endereco endereco) { this.endereco = endereco; }
+
+    public String getCpf() {return cpf;}
+    public void setCpf(String cpf) {this.cpf = cpf;}
 
     @Override
     public String toString() {

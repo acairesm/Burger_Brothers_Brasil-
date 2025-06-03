@@ -6,8 +6,8 @@ import java.util.List;
 public class Cliente extends Pessoa {
     private List<Pedido> historicoPedidos;
 
-    public Cliente(String nome, String telefone, Endereco endereco) {
-        super(nome, telefone, endereco);
+    public Cliente(String cpf,String nome, String telefone, Endereco endereco) {
+        super(cpf,nome, telefone, endereco);
         this.historicoPedidos = new ArrayList<>();
     }
 
