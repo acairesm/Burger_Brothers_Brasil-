@@ -14,7 +14,7 @@ public class MenuCliente {
         int opcao = 0;
         do {
             System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
-            System.out.println(ANSI_BLUE + "       Menu de Clientes" + ANSI_RESET);
+            System.out.println(ANSI_BLUE + "       MENU CLIENTES" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
             System.out.println(ANSI_GREEN + "1. Cadastrar Cliente" + ANSI_RESET);
             System.out.println(ANSI_GREEN + "2. Listar Clientes" + ANSI_RESET);
