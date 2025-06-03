@@ -33,18 +33,12 @@ public class MenuPedido {
             opcao = InputHelper.lerInt("Escolha uma opção: ");
 
             switch (opcao) {
-                case 1:
-                    criarPedido();
-                case 2:
-                    listarPedidos();
-                case 3:
-                    excluirPedido();
-                case 4:
-                    alterarPedido();
-                case 0:
-                    System.out.println(ANSI_GREEN + "Voltando ao menu principal..." + ANSI_RESET);
-                default:
-                    System.out.println(ANSI_RED + "Opção inválida!" + ANSI_RESET);
+                case 1 -> criarPedido();
+                case 2 -> listarPedidos();
+                case 3 -> excluirPedido();
+                case 4 -> alterarPedido();
+                case 0 -> System.out.println(ANSI_GREEN + "Voltando ao menu principal..." + ANSI_RESET);
+                default -> System.out.println(ANSI_RED + "Opção inválida!" + ANSI_RESET);
             }
         } while (opcao != 0);
     }
