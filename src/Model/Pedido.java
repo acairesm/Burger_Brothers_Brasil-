@@ -10,7 +10,7 @@ public class Pedido {
     private List<ItemPedido> itens;
     private Date data;
 
-    public Pedido(Cliente cliente, Funcionario funcionario) {
+    public Pedido(Cliente cliente, Funcionario funcionario, List<ItemPedido> itens) {
         this.cliente = cliente;
         this.funcionario = funcionario;
         this.itens = new ArrayList<>();

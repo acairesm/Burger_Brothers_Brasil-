@@ -9,7 +9,7 @@ public class PedidoController {
 
 
 
-    public void criarPedido(Pedido pedido) {
+    public static void criarPedido(Pedido pedido) {
         pedidos.add(pedido);
     }
 
