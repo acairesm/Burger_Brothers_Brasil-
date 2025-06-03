@@ -24,20 +24,11 @@ public class MenuPrincipal {
             opcao = InputHelper.lerInt("Digite uma opção :");
 
             switch (opcao) {
-                case 1:
-                    MenuCliente.exibir();
-                    break;
-                case 2:
-                    MenuProduto.exibir();
-                    break;
-                case 3:
-                    MenuPedido.exibir();
-                    break;
-                case 0:
-                    System.out.println(ANSI_GREEN + "Saindo do sistema. Até logo!" + ANSI_RESET);
-                    break;
-                default:
-                    System.out.println(ANSI_RED + "Opção inválida! Tente novamente." + ANSI_RESET);
+                case 1 -> MenuCliente.exibir();
+                case 2 -> MenuProduto.exibir();
+                case 3 -> MenuPedido.exibir();
+                case 0 -> System.out.println(ANSI_GREEN + "Saindo do sistema. Até logo!" + ANSI_RESET);
+                default -> System.out.println(ANSI_RED + "Opção inválida! Tente novamente." + ANSI_RESET);
             }
         } while (opcao != 0);
     }
