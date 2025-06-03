@@ -61,8 +61,6 @@ public class MenuCliente {
         System.out.println(ANSI_BLUE + "--------- Excluir Cliente ---------" + ANSI_RESET);
         String cpf = InputHelper.lerString("Digite o CPF do cliente ");
         ClienteController.deletarCliente(cpf);
-        System.out.println(ANSI_GREEN + "Cliente excluído com sucesso!" + ANSI_RESET);
-
     }
 
     private static void mudarInfos() {
@@ -77,7 +75,7 @@ public class MenuCliente {
                     clienteEncontrado = c;
                     break;
                 }else {
-                    System.out.println("Cliente nao encontrado... Digite um cliente que existe!  ");
+                    System.out.println(ANSI_RED +"Cliente não encontrado... Digite um CPF existente! "+ ANSI_RESET);
 
                 }
             }
@@ -87,12 +85,12 @@ public class MenuCliente {
         } else {
             // Menu de alteração
             System.out.println("Qual informação você quer editar:");
-            System.out.println("1 - Nome");
-            System.out.println("2 - Telefone");
-            System.out.println("3 - Endereço -> Rua");
-            System.out.println("4 - Endereço -> Número");
-            System.out.println("5 - Endereço -> Cidade");
-            System.out.println("6 - Endereço -> Estado");
+            System.out.println("[1] - Nome");
+            System.out.println("[2] - Telefone");
+            System.out.println("[3] - Endereço -> Rua");
+            System.out.println("[4] - Endereço -> Número");
+            System.out.println("[5] - Endereço -> Cidade");
+            System.out.println("[6]- Endereço -> Estado");
 
             int op = InputHelper.lerInt("Digite a opção: ");
 
@@ -102,32 +100,26 @@ public class MenuCliente {
                 case 1:
                     String novoNome = InputHelper.lerString("Digite o novo nome: ");
                     ClienteController.editarNome(cpf, novoNome);
-                    System.out.println(ANSI_GREEN + "Nome atualizado com sucesso!" + ANSI_RESET);
                     break;
                 case 2:
                     String novoTel = InputHelper.lerString("Digite o novo telefone: ");
                     ClienteController.editarTel(cpf, novoTel);
-                    System.out.println(ANSI_GREEN + "Telefone atualizado com sucesso!" + ANSI_RESET);
                     break;
                 case 3:
                     String novaRua = InputHelper.lerString("Digite a nova rua: ");
                     ClienteController.editarRua(cpf, novaRua);
-                    System.out.println(ANSI_GREEN + "Rua atualizada com sucesso!" + ANSI_RESET);
                     break;
                 case 4:
                     String novoNumero = InputHelper.lerString("Digite o novo número: ");
                     ClienteController.editarNumero(cpf, novoNumero);
-                    System.out.println(ANSI_GREEN + "Número atualizado com sucesso!" + ANSI_RESET);
                     break;
                 case 5:
                     String novaCidade = InputHelper.lerString("Digite a nova cidade: ");
                     ClienteController.editarCidade(cpf, novaCidade);
-                    System.out.println(ANSI_GREEN + "Cidade atualizada com sucesso!" + ANSI_RESET);
                     break;
                 case 6:
                     String novoEstado = InputHelper.lerString("Digite o novo estado: ");
                     ClienteController.editarEstado(cpf, novoEstado);
-                    System.out.println(ANSI_GREEN + "Estado atualizado com sucesso!" + ANSI_RESET);
                     break;
                 default:
                     System.out.println(ANSI_RED + "Opção inválida!" + ANSI_RESET);

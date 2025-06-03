@@ -9,6 +9,7 @@ import java.util.List;
 public class ClienteController {
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_RED = "\u001B[31m";
     public static List<Cliente> clientes = new ArrayList<>();
 
     public static void cadastrarCliente(Cliente cliente) {
@@ -25,13 +26,13 @@ public class ClienteController {
         for (Cliente c : clientes){
             if (cpfdelete.equals(c.getCpf())){
                 clientes.remove(c);
-                System.out.println("Cliente com cpf "+ cpfdelete+ " excluido com successo! ");
+                System.out.println(ANSI_GREEN +"Cliente com cpf "+ cpfdelete+ " excluido com successo! "+ ANSI_RESET);
                 encontrado=true;
                 break;
             }
         }
         if (!encontrado){
-            System.out.println("Cliente com cpf "+cpfdelete+" nao encontrado! ");
+            System.out.println(ANSI_RED + "Cliente com cpf "+cpfdelete+" nao encontrado! "+ ANSI_RESET);
         }
     }
 
@@ -40,13 +41,13 @@ public class ClienteController {
         for (Cliente c : clientes){
             if (cpfedit.equals(c.getCpf())){
                 c.setTelefone(tel);
-                System.out.println("Telefone alterado com successo! ");
+                System.out.println(ANSI_GREEN + "Telefone atualizado com sucesso!" + ANSI_RESET);
                 encontrado=true;
                 break;
             }
         }
         if (!encontrado){
-            System.out.println("Cliente com cpf "+cpfedit+" nao encontrado! ");
+            System.out.println(ANSI_RED + "Cliente com cpf "+cpfedit+" nao encontrado! "+ ANSI_RESET);
         }
     }
 
@@ -55,13 +56,13 @@ public class ClienteController {
         for (Cliente c : clientes){
             if (cpfedit.equals(c.getCpf())){
                 c.setNome(n);
-                System.out.println("Nome alterado com successo! ");
+                System.out.println(ANSI_GREEN + "Nome atualizado com sucesso!" + ANSI_RESET);
                 encontrado=true;
                 break;
             }
         }
         if (!encontrado){
-            System.out.println("Cliente com cpf "+cpfedit+" nao encontrado! ");
+            System.out.println(ANSI_RED + "Cliente com cpf "+cpfedit+" nao encontrado! "+ ANSI_RESET);
         }
     }
 
@@ -70,13 +71,13 @@ public class ClienteController {
         for (Cliente c : clientes){
             if (cpfedit.equals(c.getCpf())){
                 c.getEndereco().setRua(r);
-                System.out.println("Rua alterada com successo !");
+                System.out.println(ANSI_GREEN + "Rua atualizada com sucesso!" + ANSI_RESET);
                 encontrado=true;
                 break;
             }
         }
         if (!encontrado){
-            System.out.println("Cliente com cpf "+cpfedit+" nao encontrado! ");
+            System.out.println(ANSI_RED + "Cliente com cpf "+cpfedit+" nao encontrado! "+ ANSI_RESET);
         }
     }
 
@@ -85,13 +86,13 @@ public class ClienteController {
         for (Cliente c : clientes){
             if (cpfedit.equals(c.getCpf())){
                 c.getEndereco().setNumero(numero);
-                System.out.println("Numero alterada com successo !");
+                System.out.println(ANSI_GREEN + "Número atualizado com sucesso!" + ANSI_RESET);
                 encontrado=true;
                 break;
             }
         }
         if (!encontrado){
-            System.out.println("Cliente com cpf "+cpfedit+" nao encontrado! ");
+            System.out.println(ANSI_RED + "Cliente com cpf "+cpfedit+" nao encontrado! "+ ANSI_RESET);
         }
     }
 
@@ -100,13 +101,13 @@ public class ClienteController {
         for (Cliente c : clientes){
             if (cpfedit.equals(c.getCpf())){
                 c.getEndereco().setCidade(cid);
-                System.out.println("Cidade alterada com successo ");
+                System.out.println(ANSI_GREEN + "Cidade atualizada com sucesso!" + ANSI_RESET);
                 encontrado=true;
                 break;
             }
         }
         if (!encontrado){
-            System.out.println("Cliente com cpf "+cpfedit+" nao encontrado! ");
+            System.out.println(ANSI_RED + "Cliente com cpf "+cpfedit+" nao encontrado! "+ ANSI_RESET);
         }
     }
 
@@ -115,13 +116,13 @@ public class ClienteController {
         for (Cliente c : clientes){
             if (cpfedit.equals(c.getCpf())){
                 c.getEndereco().setEstado(estado);
-                System.out.println("Rua alterada com successo ");
+                System.out.println(ANSI_GREEN + "Rua atualizada com sucesso!" + ANSI_RESET);
                 encontrado=true;
                 break;
             }
         }
         if (!encontrado){
-            System.out.println("Cliente com cpf "+cpfedit+" nao encontrado! ");
+            System.out.println(ANSI_RED + "Cliente com cpf "+cpfedit+" nao encontrado! "+ ANSI_RESET);
         }
     }
 }
