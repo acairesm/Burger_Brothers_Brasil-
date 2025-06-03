@@ -28,7 +28,12 @@ public abstract class Pessoa {
 
     @Override
     public String toString() {
-        return "Nome: " + nome + ", Telefone: " + telefone + ", Endereço: " + endereco;
+        return "Pessoa{" +
+                "cpf='" + cpf + '\'' +
+                ", nome='" + nome + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", endereco=" + endereco +
+                '}';
     }
 }
 
