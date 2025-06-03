@@ -41,4 +41,25 @@ public class InputHelper {
         return num;
     }
 
+    public static boolean lerBoolean(String texto) {
+        boolean valido = false;
+        boolean valor = false;
+        do {
+            System.out.print(texto + " (true/false): ");
+            String input = scanner.nextLine().trim().toLowerCase();
+            if (input.equals("true")) {
+                valor = true;
+                valido = true;
+            } else if (input.equals("false")) {
+                valor = false;
+                valido = true;
+            } else {
+                System.out.println("Digite 'true' ou 'false'.");
+            }
+        } while (!valido);
+        return valor;
+    }
+
+
+
 }
