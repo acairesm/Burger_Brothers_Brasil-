@@ -34,11 +34,11 @@ public class MenuProduto {
         switch (tipo) {
             case 1 -> {
                 String tipoCarne = InputHelper.lerString("Tipo de Carne: ");
-                boolean temQueijo = InputHelper.lerBoolean("Tem queijo? (true/false): ");
+                boolean temQueijo = InputHelper.lerBoolean("Tem queijo? ");
                 ProdutoController.cadastrarHamburguer(nome, preco, tipoCarne, temQueijo);
             }
             case 2 -> {
-                boolean isAlcoolica = InputHelper.lerBoolean("É alcoolica? (true/false): ");
+                boolean isAlcoolica = InputHelper.lerBoolean("É alcoolica?  ");
                 ProdutoController.cadastrarBebida(nome, preco, isAlcoolica);
             }
             case 3 -> {
