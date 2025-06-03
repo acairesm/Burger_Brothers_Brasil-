@@ -40,39 +40,7 @@ public class MenuPedido {
     }
 
     private static void criarPedido() {
-        System.out.println(ANSI_BLUE + "--------- Criar Pedido ---------" + ANSI_RESET);
 
-        // Selecionar Cliente
-        System.out.println("Selecione um cliente:");
-        List<Cliente> clientes = ClienteController.listarClientes();
-        for (int i = 0; i < clientes.size(); i++) {
-            System.out.println((i + 1) + ". " + clientes.get(i));
-        }
-        int clienteIndex = InputHelper.lerInt("Escolha o número do cliente: ") - 1;
-        Cliente cliente = clientes.get(clienteIndex);
-
-
-        // Selecionar Produtos
-        List<ItemPedido> itens = new ArrayList<>();
-        boolean adicionarMais = true;
-        while (adicionarMais) {
-            System.out.println("Selecione um produto:");
-            List<Produto> produtos = ProdutoController.listarProdutos();
-            for (int i = 0; i < produtos.size(); i++) {
-                System.out.println((i + 1) + ". " + produtos.get(i));
-            }
-            int produtoIndex = InputHelper.lerInt("Escolha o número do produto: ") - 1;
-            Produto produto = produtos.get(produtoIndex);
-            int quantidade = InputHelper.lerInt("Quantidade: ");
-            itens.add(new ItemPedido(produto, quantidade));
-
-            adicionarMais = InputHelper.lerString("Deseja adicionar mais produtos? (s/n): ").equalsIgnoreCase("s");
-        }
-
-        // Criar o pedido
-        Pedido pedido = new Pedido(cliente, itens);
-        PedidoController.criarPedido(pedido);
-        System.out.println(ANSI_GREEN + "Pedido criado com sucesso!" + ANSI_RESET);
     }
 
     private static void listarPedidos() {
