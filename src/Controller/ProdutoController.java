@@ -37,7 +37,7 @@ public class ProdutoController {
         // Implementar lógica para editar produto
     }
 
-    public void deletarProduto(Produto produto) {
+    public static void deletarProduto(Produto produto) {
         produtos.remove(produto);
     }
 }
