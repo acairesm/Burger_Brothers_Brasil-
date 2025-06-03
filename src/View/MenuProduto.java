@@ -14,10 +14,10 @@ public class MenuProduto {
     public static void exibir() {
         int opcao;
         do {
-            System.out.println("Menu de Produtos:");
-            System.out.println("1. Cadastrar Produto");
-            System.out.println("2. Listar Produtos");
-            System.out.println("0. Voltar");
+            System.out.println(ANSI_BLUE + "Menu de Produtos:" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "1. Cadastrar Produto" + ANSI_RESET);
+            System.out.println(ANSI_GREEN +"2. Listar Produtos" + ANSI_RESET);
+            System.out.println(ANSI_RED + "0. Voltar"+ ANSI_RESET);
             opcao = InputHelper.lerInt("Escolha uma opção ");
 
             switch (opcao) {
