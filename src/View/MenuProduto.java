@@ -2,11 +2,14 @@ package View;
 
 import Controller.ProdutoController;
 import Model.Produto;
-import Model.Hamburguer;
-import Model.Bebida;
-import Model.Acompanhamento;
 
 public class MenuProduto {
+
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_RED = "\u001B[31m";
+
 
     public static void exibir() {
         int opcao;
@@ -27,31 +30,31 @@ public class MenuProduto {
     }
 
     private static void cadastrarProduto() {
-        System.out.println("1. Hamburguer");
-        System.out.println("2. Bebida");
-        System.out.println("3. Acompanhamento");
+        System.out.println(ANSI_BLUE + "--------- Lista de Produtos ---------" + ANSI_RESET);
+        System.out.println(ANSI_GREEN+ "1. Hamburguer" + ANSI_RESET);
+        System.out.println(ANSI_GREEN+ "2. Bebida" + ANSI_RESET);
+        System.out.println(ANSI_GREEN+ "3. Acompanhamento" + ANSI_RESET);
         int tipo = InputHelper.lerInt("Escolha o tipo de produto: ");
-        String nome =  InputHelper.lerString("Nome: ");
+        String nome = InputHelper.lerString("Nome: ");
         float preco = InputHelper.lerFloat("Preço: ");
 
-        //essa parte ta mt errada provalmente tem que criar um metodo "Adicionar a lista tal ocoisa"
-        Produto produto = null;
         switch (tipo) {
-            case 1:
-                produto = new Hamburguer(nome, preco);
-                break;
-            case 2:
-                produto = new Bebida(nome, preco);
-                break;
-            case 3:
-                produto = new Acompanhamento(nome, preco);
-                break;
-            default:
-                System.out.println("Tipo de produto inválido!");
-                return;
+            case 1 -> {
+                String tipoCarne = InputHelper.lerString("Tipo de Carne: ");
+                boolean temQueijo = InputHelper.lerBoolean("Tem queijo? ");
+                ProdutoController.cadastrarHamburguer(nome, preco, tipoCarne, temQueijo);
+            }
+            case 2 -> {
+                boolean isAlcoolica = InputHelper.lerBoolean("É alcoolica?  ");
+                ProdutoController.cadastrarBebida(nome, preco, isAlcoolica);
+            }
+            case 3 -> {
+                String tipoAcompanhamento = InputHelper.lerString("Tipo de Acompanhamento: ");
+                ProdutoController.cadastrarAcompanhamento(nome, preco, tipoAcompanhamento);
+            }
+            default -> System.out.println("Tipo de produto inválido!");
         }
 
-        ProdutoController.cadastrarProduto(produto);
         System.out.println("Produto cadastrado com sucesso!");
     }
 
@@ -62,4 +65,3 @@ public class MenuProduto {
         }
     }
 }
-
