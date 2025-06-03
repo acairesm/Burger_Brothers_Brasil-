@@ -48,7 +48,6 @@ public class MenuCliente {
         Endereco endereco = new Endereco(rua, numero, cidade, estado);
         Cliente cliente = new Cliente(cpf,nome, telefone, endereco);
         ClienteController.cadastrarCliente(cliente);
-        System.out.println(ANSI_GREEN + "Cliente cadastrado com sucesso!" + ANSI_RESET);
     }
 
     private static void listarClientes() {
