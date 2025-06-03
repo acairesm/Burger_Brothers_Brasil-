@@ -26,21 +26,19 @@ public class InputHelper {
         return txt;
     }
 
-    public static double lerDouble(String mensagem) {
-        System.out.print(mensagem);
-        while (!scanner.hasNextDouble()) {
-            System.out.print("Valor inválido. Digite um número decimal: ");
-            scanner.next();
-        }
-        return scanner.nextDouble();
+    public static float lerFloat(String texto) {
+        float num = 0;
+        boolean valido = false;
+        do {
+            try {
+                System.out.print(texto);
+                num = Float.parseFloat(scanner.nextLine());
+                valido = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Digite um número válido.");
+            }
+        } while (!valido);
+        return num;
     }
 
-    public static float lerFloat(String mensagem) {
-        System.out.print(mensagem);
-        while (!scanner.hasNextFloat()) {
-            System.out.print("Valor inválido. Digite um número decimal: ");
-            scanner.next();
-        }
-        return scanner.nextFloat();
-    }
 }
