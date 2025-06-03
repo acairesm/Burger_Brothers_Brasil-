@@ -1,12 +1,10 @@
 package View;
 
 import Controller.ClienteController;
-import Controller.FuncionarioController;
 import Controller.PedidoController;
 import Controller.ProdutoController;
 import Model.Pedido;
 import Model.Cliente;
-import Model.Funcionario;
 import Model.ItemPedido;
 import Model.Produto;
 
@@ -53,15 +51,6 @@ public class MenuPedido {
         int clienteIndex = InputHelper.lerInt("Escolha o número do cliente: ") - 1;
         Cliente cliente = clientes.get(clienteIndex);
 
-        // Selecionar Funcionário
-        System.out.println("Selecione um funcionário:");
-
-        List<Funcionario> funcionarios = FuncionarioController.listarFuncionarios();
-        for (int i = 0; i < funcionarios.size(); i++) {
-            System.out.println((i + 1) + ". " + funcionarios.get(i));
-        }
-        int funcionarioIndex = InputHelper.lerInt("Escolha o número do funcionário: ") - 1;
-        Funcionario funcionario = funcionarios.get(funcionarioIndex);
 
         // Selecionar Produtos
         List<ItemPedido> itens = new ArrayList<>();
@@ -81,7 +70,7 @@ public class MenuPedido {
         }
 
         // Criar o pedido
-        Pedido pedido = new Pedido(cliente, funcionario, itens);
+        Pedido pedido = new Pedido(cliente, itens);
         PedidoController.criarPedido(pedido);
         System.out.println(ANSI_GREEN + "Pedido criado com sucesso!" + ANSI_RESET);
     }
