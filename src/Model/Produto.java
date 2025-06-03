@@ -18,4 +18,10 @@ public abstract class Produto implements ItemCardapio {
     public String toString() {
         return "Produto: " + nome + ", Preço: " + preco;
     }
+
+    public void setNome(String novoNome) {
+    }
+
+    public void setPreco(float novoPreco) {
+    }
 }

@@ -6,13 +6,11 @@ import java.util.List;
 
 public class Pedido {
     private Cliente cliente;
-    private Funcionario funcionario;
     private List<ItemPedido> itens;
     private Date data;
 
     public Pedido(Cliente cliente, List<ItemPedido> itens) {
         this.cliente = cliente;
-        this.funcionario = funcionario;
         this.itens = new ArrayList<>();
         this.data = new Date(); // Data atual
     }
@@ -31,7 +29,11 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return "Pedido de " + cliente.getNome() + " atendido por " + funcionario.getNome() + ", Total: " + calcularValorTotal();
+        return "Pedido{" +
+                "cliente=" + cliente +
+                ", itens=" + itens +
+                ", data=" + data +
+                '}';
     }
 }
 

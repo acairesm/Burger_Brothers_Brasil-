@@ -5,25 +5,24 @@ import java.util.Scanner;
 public class InputHelper {
     private static Scanner scanner = new Scanner(System.in);
 
-    public static int lerInt(String texto){
+    public static int lerInt(String texto) {
         int num = 0;
-        boolean valido= false;
+        boolean valido = false;
         do {
             try {
                 System.out.print(texto);
-                num= Integer.parseInt(scanner.nextLine());
-                valido= true;
+                num = Integer.parseInt(scanner.nextLine());
+                valido = true;
             } catch (NumberFormatException e) {
-                System.out.println("Enter a valid number");
+                System.out.println("Digite um número válido.");
             }
-        }while (valido=false);
+        } while (!valido);
         return num;
     }
 
     public static String lerString(String mensagem) {
         System.out.print(mensagem);
-        String txt = scanner.nextLine();
-        return txt;
+        return scanner.nextLine();
     }
 
     public static float lerFloat(String texto) {
@@ -47,10 +46,10 @@ public class InputHelper {
         do {
             System.out.print(texto + " (Sim/Não): ");
             String input = scanner.nextLine().trim().toLowerCase();
-            if (input.equals("true")) {
+            if (input.equals("sim")) {
                 valor = true;
                 valido = true;
-            } else if (input.equals("Não")) {
+            } else if (input.equals("não")) {
                 valor = false;
                 valido = true;
             } else {
@@ -59,7 +58,4 @@ public class InputHelper {
         } while (!valido);
         return valor;
     }
-
-
-
 }
