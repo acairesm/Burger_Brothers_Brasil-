@@ -32,6 +32,7 @@ public class MenuPrincipal {
                     MenuPedido.exibir();
                 case 0:
                     System.out.println(ANSI_GREEN + "Saindo do sistema. Até logo!" + ANSI_RESET);
+                    break;
                 default:
                     System.out.println(ANSI_RED + "Opção inválida! Tente novamente." + ANSI_RESET);
             }
