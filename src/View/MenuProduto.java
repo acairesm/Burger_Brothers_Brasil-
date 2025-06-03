@@ -24,7 +24,7 @@ public class MenuProduto {
             System.out.println(ANSI_GREEN + "2. Listar Produtos" + ANSI_RESET);
             System.out.println(ANSI_GREEN + "3. Editar Produto" + ANSI_RESET);
             System.out.println(ANSI_RED + "4. Excluir Produto" + ANSI_RESET);
-            System.out.println(ANSI_RED + "0. Voltar" + ANSI_RESET);
+            System.out.println(ANSI_YELLOW + "0. Voltar" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "==========================" + ANSI_RESET);
             opcao = InputHelper.lerInt("Escolha uma opção: ");
 
