@@ -5,6 +5,12 @@ import Model.Produto;
 
 public class MenuProduto {
 
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_RED = "\u001B[31m";
+
+
     public static void exibir() {
         int opcao;
         do {
@@ -24,9 +30,10 @@ public class MenuProduto {
     }
 
     private static void cadastrarProduto() {
-        System.out.println("1. Hamburguer");
-        System.out.println("2. Bebida");
-        System.out.println("3. Acompanhamento");
+        System.out.println(ANSI_BLUE + "--------- Lista de Produtos ---------" + ANSI_RESET);
+        System.out.println(ANSI_GREEN+ "1. Hamburguer" + ANSI_RESET);
+        System.out.println(ANSI_GREEN+ "2. Bebida" + ANSI_RESET);
+        System.out.println(ANSI_GREEN+ "3. Acompanhamento" + ANSI_RESET);
         int tipo = InputHelper.lerInt("Escolha o tipo de produto: ");
         String nome = InputHelper.lerString("Nome: ");
         float preco = InputHelper.lerFloat("Preço: ");
