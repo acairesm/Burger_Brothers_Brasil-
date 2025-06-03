@@ -1,10 +1,6 @@
 
 package View;
 
-import java.util.Scanner;
-import Controller.ClienteController;
-import Controller.ProdutoController;
-import Controller.PedidoController;
 
 public class MenuPrincipal {
 
@@ -18,7 +14,7 @@ public class MenuPrincipal {
             System.out.println("0. Sair");
             opcao = InputHelper.lerInt("Digite uma opçao :");
 
-            switch (opcao) { // Extamente aqui para fazer funcionar os menus
+            switch (opcao) {
                 case 1:
                     MenuCliente.exibir();
                     break;
