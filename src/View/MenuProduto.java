@@ -11,6 +11,8 @@ public class MenuProduto {
     public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_RED = "\u001B[31m";
+    private static final String ANSI_YELLOW = "\u001B[33m";
+
 
     public static void exibir() {
         int opcao;
@@ -76,28 +78,48 @@ public class MenuProduto {
     }
 
     private static void editarProduto() {
+        List<Produto> produtos = ProdutoController.listarProdutos();
+
+        if (produtos.isEmpty()) {
+            System.out.println(ANSI_RED + "Não há produtos cadastrados para editar." + ANSI_RESET);
+            return;
+        }
+
         listarProdutos();
         int indice = InputHelper.lerInt("Escolha o número do produto que deseja editar: ") - 1;
 
-        List<Produto> produtos = ProdutoController.listarProdutos();
         if (indice < 0 || indice >= produtos.size()) {
             System.out.println(ANSI_RED + "Produto inválido!" + ANSI_RESET);
             return;
         }
 
         Produto produto = produtos.get(indice);
-        String novoNome = InputHelper.lerString("Novo nome (deixe em branco para manter " + produto.getNome() + "): ");
-        float novoPreco = InputHelper.lerFloat("Novo preço (digite -1 para manter " + produto.getPreco() + "): ");
 
-        if (!novoNome.isEmpty()) {
-            produto.setNome(novoNome);
+        System.out.println(ANSI_YELLOW + "Você está editando o produto: " + produto.getNome() + ANSI_RESET);
+        String novoNome = InputHelper.lerString("Novo nome (deixe em branco para manter \"" + produto.getNome() + "\"): ");
+        float novoPreco = InputHelper.lerFloat("Novo preço (digite -1 para manter R$ " + produto.getPreco() + "): ");
+
+        boolean alterado = false;
+
+        if (!novoNome.trim().isEmpty()) {
+            produto.setNome(novoNome.trim());
+            alterado = true;
         }
+
         if (novoPreco >= 0) {
             produto.setPreco(novoPreco);
+            alterado = true;
         }
 
-        System.out.println(ANSI_GREEN + "Produto editado com sucesso!" + ANSI_RESET);
+        if (alterado) {
+            ProdutoController.editarProduto(indice, produto); // <- aplica as alterações
+            System.out.println(ANSI_GREEN + "Produto editado com sucesso!" + ANSI_RESET);
+        } else {
+            System.out.println(ANSI_YELLOW + "Nenhuma alteração foi feita no produto." + ANSI_RESET);
+        }
     }
+
+
 
     private static void excluirProduto() {
         listarProdutos();

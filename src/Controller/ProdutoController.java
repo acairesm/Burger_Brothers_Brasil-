@@ -14,6 +14,12 @@ public class ProdutoController {
         produtos.add(produto);
     }
 
+    public static void editarProduto(int indice, Produto produtoAtualizado) {
+        if (indice >= 0 && indice < produtos.size()) {
+            produtos.set(indice, produtoAtualizado);
+        }
+    }
+
     public static List<Produto> listarProdutos() {
         return produtos;
     }
