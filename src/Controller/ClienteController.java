@@ -9,7 +9,7 @@ import java.util.List;
 public class ClienteController {
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_RESET = "\u001B[0m";
-    private static List<Cliente> clientes = new ArrayList<>();
+    public static List<Cliente> clientes = new ArrayList<>();
 
     public static void cadastrarCliente(Cliente cliente) {
         clientes.add(cliente);
