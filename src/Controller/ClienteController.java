@@ -5,17 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ClienteController {
-    private List<Cliente> clientes;
+    private static List<Cliente> clientes = new ArrayList<>();
 
-    public ClienteController() {
-        this.clientes = new ArrayList<>();
-    }
 
-    public void cadastrarCliente(Cliente cliente) {
+    public static void cadastrarCliente(Cliente cliente) {
         clientes.add(cliente);
     }
 
-    public List<Cliente> listarClientes() {
+    public static List<Cliente> listarClientes() {
         return clientes;
     }
 

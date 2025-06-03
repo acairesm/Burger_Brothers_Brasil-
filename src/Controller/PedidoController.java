@@ -5,17 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PedidoController {
-    private List<Pedido> pedidos;
+    private static List<Pedido> pedidos = new ArrayList<>();
 
-    public PedidoController() {
-        this.pedidos = new ArrayList<>();
-    }
+
 
     public void criarPedido(Pedido pedido) {
         pedidos.add(pedido);
     }
 
-    public List<Pedido> listarPedidos() {
+    public static List<Pedido> listarPedidos() {
         return pedidos;
     }
 

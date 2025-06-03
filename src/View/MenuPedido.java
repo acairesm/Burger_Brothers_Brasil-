@@ -9,13 +9,7 @@ import Model.Produto;
 
 public class MenuPedido {
 
-    private PedidoController pedidoController;
-
-    public MenuPedido(PedidoController pedidoController) {
-        this.pedidoController = pedidoController;
-    }
-
-    public void exibir() {
+    public static void exibir() {
         int opcao=0;
         do {
             System.out.println("Menu de Pedidos:");
@@ -33,16 +27,16 @@ public class MenuPedido {
         } while (opcao != 0);
     }
 
-    private void criarPedido() {
+    private static void criarPedido() {
         // Implementar lógica para criar pedido
         // Exemplo simplificado
         System.out.println("Criando pedido...");
         // Aqui você pode adicionar lógica para selecionar cliente, funcionario e produtos
     }
 
-    private void listarPedidos() {
+    private static void listarPedidos() {
         System.out.println("Lista de Pedidos:");
-        for (Pedido pedido : pedidoController.listarPedidos()) {
+        for (Pedido pedido : PedidoController.listarPedidos()) {
             System.out.println(pedido);
         }
     }

@@ -7,17 +7,6 @@ import Controller.ProdutoController;
 import Controller.PedidoController;
 
 public class MenuPrincipal {
-    private Scanner scanner;
-    private ClienteController clienteController;
-    private ProdutoController produtoController;
-    private PedidoController pedidoController;
-
-    public MenuPrincipal() {
-        this.scanner = new Scanner(System.in);
-        this.clienteController = new ClienteController();
-        this.produtoController = new ProdutoController();
-        this.pedidoController = new PedidoController();
-    }
 
     public void exibir() {
         int opcao;
@@ -27,18 +16,17 @@ public class MenuPrincipal {
             System.out.println("2. Gerenciar Produtos");
             System.out.println("3. Gerenciar Pedidos");
             System.out.println("0. Sair");
-            System.out.print("Escolha uma opção: ");
-            opcao = scanner.nextInt();
+            opcao = InputHelper.lerInt("Digite uma opçao :");
 
             switch (opcao) { // Extamente aqui para fazer funcionar os menus
                 case 1:
-                    // Chamar MenuCliente
+                    MenuCliente.exibir();
                     break;
                 case 2:
-                    // Chamar MenuProduto
+                    MenuProduto.exibir();
                     break;
                 case 3:
-                    // Chamar MenuPedido
+                    MenuPedido.exibir();
                     break;
                 case 0:
                     System.out.println("Saindo...");

@@ -5,17 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProdutoController {
-    private List<Produto> produtos;
+    private static List<Produto> produtos = new ArrayList<>();
 
-    public ProdutoController() {
-        this.produtos = new ArrayList<>();
-    }
-
-    public void cadastrarProduto(Produto produto) {
+    public static void cadastrarProduto(Produto produto) {
         produtos.add(produto);
     }
 
-    public List<Produto> listarProdutos() {
+    public static List<Produto> listarProdutos() {
         return produtos;
     }
 

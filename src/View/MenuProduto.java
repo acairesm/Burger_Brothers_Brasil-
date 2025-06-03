@@ -7,13 +7,8 @@ import Model.Bebida;
 import Model.Acompanhamento;
 
 public class MenuProduto {
-    private ProdutoController produtoController;
 
-    public MenuProduto(ProdutoController produtoController) {
-        this.produtoController = produtoController;
-    }
-
-    public void exibir() {
+    public static void exibir() {
         int opcao;
         do {
             System.out.println("Menu de Produtos:");
@@ -31,13 +26,13 @@ public class MenuProduto {
         } while (opcao != 0);
     }
 
-    private void cadastrarProduto() {
+    private static void cadastrarProduto() {
         System.out.println("1. Hamburguer");
         System.out.println("2. Bebida");
         System.out.println("3. Acompanhamento");
         int tipo = InputHelper.lerInt("Escolha o tipo de produto: ");
         String nome =  InputHelper.lerString("Nome: ");
-        double preco = InputHelper.lerDouble("Preço: ");
+        float preco = InputHelper.lerFloat("Preço: ");
 
         //essa parte ta mt errada provalmente tem que criar um metodo "Adicionar a lista tal ocoisa"
         Produto produto = null;
@@ -56,13 +51,13 @@ public class MenuProduto {
                 return;
         }
 
-        produtoController.cadastrarProduto(produto);
+        ProdutoController.cadastrarProduto(produto);
         System.out.println("Produto cadastrado com sucesso!");
     }
 
-    private void listarProdutos() {
+    private static void listarProdutos() {
         System.out.println("Lista de Produtos:");
-        for (Produto produto : produtoController.listarProdutos()) {
+        for (Produto produto : ProdutoController.listarProdutos()) {
             System.out.println(produto);
         }
     }
