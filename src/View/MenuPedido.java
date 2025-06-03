@@ -22,7 +22,7 @@ public class MenuPedido {
         int opcao = 0;
         do {
             System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
-            System.out.println(ANSI_BLUE + "       Menu de Pedidos" + ANSI_RESET);
+            System.out.println(ANSI_BLUE + "       MENU DE PEDIDOS" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
             System.out.println(ANSI_GREEN + "1. Criar Pedido" + ANSI_RESET);
             System.out.println(ANSI_GREEN + "2. Listar Pedidos" + ANSI_RESET);
