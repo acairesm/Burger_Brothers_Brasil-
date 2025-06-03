@@ -1,6 +1,7 @@
 package View;
 
 import Controller.ClienteController;
+import Controller.FuncionarioController;
 import Controller.PedidoController;
 import Controller.ProdutoController;
 import Model.Pedido;
