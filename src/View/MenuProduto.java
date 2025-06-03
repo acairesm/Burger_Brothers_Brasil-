@@ -20,30 +20,36 @@ public class MenuProduto {
             System.out.println(ANSI_BLUE + "==========================" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "       MENU PRODUTOS" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "==========================" + ANSI_RESET);
-            System.out.println(ANSI_GREEN + "1. Cadastrar Produto" + ANSI_RESET);
-            System.out.println(ANSI_GREEN + "2. Listar Produtos" + ANSI_RESET);
-            System.out.println(ANSI_GREEN + "3. Editar Produto" + ANSI_RESET);
-            System.out.println(ANSI_RED + "4. Excluir Produto" + ANSI_RESET);
-            System.out.println(ANSI_YELLOW + "0. Voltar" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "[1] Cadastrar Produto" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "[2] Listar Produtos" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "[3] Editar Produto" + ANSI_RESET);
+            System.out.println(ANSI_RED + "[4] Excluir Produto" + ANSI_RESET);
+            System.out.println(ANSI_YELLOW + "[0] Voltar" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "==========================" + ANSI_RESET);
             opcao = InputHelper.lerInt("Escolha uma opção: ");
 
             switch (opcao) {
-                case 1 -> cadastrarProduto();
-                case 2 -> listarProdutos();
-                case 3 -> editarProduto();
-                case 4 -> excluirProduto();
-                case 0 -> System.out.println(ANSI_BLUE + "Voltando ao menu principal..." + ANSI_RESET);
-                default -> System.out.println(ANSI_RED + "Opção inválida!" + ANSI_RESET);
+                case 1:
+                    cadastrarProduto();
+                case 2:
+                    listarProdutos();
+                case 3:
+                    editarProduto();
+                case 4:
+                    excluirProduto();
+                case 0:
+                    System.out.println(ANSI_BLUE + "Voltando ao menu principal..." + ANSI_RESET);
+                default:
+                    System.out.println(ANSI_RED + "Opção inválida!" + ANSI_RESET);
             }
         } while (opcao != 0);
     }
 
     private static void cadastrarProduto() {
         System.out.println(ANSI_BLUE + "--------- Cadastro de Produtos ---------" + ANSI_RESET);
-        System.out.println(ANSI_GREEN + "1. Hamburguer" + ANSI_RESET);
-        System.out.println(ANSI_GREEN + "2. Bebida" + ANSI_RESET);
-        System.out.println(ANSI_GREEN + "3. Acompanhamento" + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "[1] Hamburguer" + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "[2] Bebida" + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "[3] Acompanhamento" + ANSI_RESET);
         int tipo = InputHelper.lerInt("Escolha o tipo de produto: ");
         String nome = InputHelper.lerString("Nome: ");
         float preco = InputHelper.lerFloat("Preço: ");

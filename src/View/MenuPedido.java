@@ -24,21 +24,27 @@ public class MenuPedido {
             System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "       MENU DE PEDIDOS" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
-            System.out.println(ANSI_GREEN + "1. Criar Pedido" + ANSI_RESET);
-            System.out.println(ANSI_GREEN + "2. Listar Pedidos" + ANSI_RESET);
-            System.out.println(ANSI_GREEN + "3. Excluir Pedido" + ANSI_RESET);
-            System.out.println(ANSI_GREEN + "4. Alterar Pedido" + ANSI_RESET);
-            System.out.println(ANSI_YELLOW + "0. Voltar" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "[1] Criar Pedido" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "[2] Listar Pedidos" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "[3] Excluir Pedido" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "[4] Alterar Pedido" + ANSI_RESET);
+            System.out.println(ANSI_YELLOW + "[0] Voltar" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
             opcao = InputHelper.lerInt("Escolha uma opção: ");
 
             switch (opcao) {
-                case 1 -> criarPedido();
-                case 2 -> listarPedidos();
-                case 3 -> excluirPedido();
-                case 4 -> alterarPedido();
-                case 0 -> System.out.println(ANSI_GREEN + "Voltando ao menu principal..." + ANSI_RESET);
-                default -> System.out.println(ANSI_RED + "Opção inválida!" + ANSI_RESET);
+                case 1:
+                    criarPedido();
+                case 2:
+                    listarPedidos();
+                case 3:
+                    excluirPedido();
+                case 4:
+                    alterarPedido();
+                case 0:
+                    System.out.println(ANSI_GREEN + "Voltando ao menu principal..." + ANSI_RESET);
+                default:
+                    System.out.println(ANSI_RED + "Opção inválida!" + ANSI_RESET);
             }
         } while (opcao != 0);
     }
