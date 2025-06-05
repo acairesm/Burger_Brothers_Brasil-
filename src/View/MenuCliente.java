@@ -17,11 +17,11 @@ public class MenuCliente {
             System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "       MENU CLIENTES" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
-            System.out.println(ANSI_GREEN + "1. Cadastrar Cliente" + ANSI_RESET);
-            System.out.println(ANSI_GREEN + "2. Listar Clientes" + ANSI_RESET);
-            System.out.println(ANSI_GREEN + "3. Excluir Cliente" + ANSI_RESET);
-            System.out.println(ANSI_GREEN + "4. Mudar Infos do Cliente" + ANSI_RESET);
-            System.out.println(ANSI_YELLOW +  "0. Voltar" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "[1] Cadastrar Cliente" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "[2] Listar Clientes" + ANSI_RESET);
+            System.out.println(ANSI_RED + "[3] Excluir Cliente" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "[4] Mudar Infos do Cliente" + ANSI_RESET);
+            System.out.println(ANSI_YELLOW + "[0] Voltar" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
             opcao = InputHelper.lerInt("Escolha uma opção: ");
 
