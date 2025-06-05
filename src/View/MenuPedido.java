@@ -12,42 +12,41 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MenuPedido {
-    // Cores ANSI
-    public static final String ANSI_RESET = "\u001B[0m"; //
-    public static final String ANSI_BLUE = "\u001B[34m"; //
-    public static final String ANSI_GREEN = "\u001B[32m"; //
-    public static final String ANSI_RED = "\u001B[31m"; //
-    private static final String ANSI_YELLOW = "\u001B[33m"; //
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_RED = "\u001B[31m";
+    private static final String ANSI_YELLOW = "\u001B[33m";
 
     public static void exibir() {
         int opcao = 0;
         do {
-            System.out.println(ANSI_BLUE + "============================" + ANSI_RESET); //
-            System.out.println(ANSI_BLUE + "       MENU DE PEDIDOS" + ANSI_RESET); //
-            System.out.println(ANSI_BLUE + "============================" + ANSI_RESET); //
-            System.out.println(ANSI_GREEN + "🛒 [1] Criar Pedido" + ANSI_RESET); //
-            System.out.println(ANSI_GREEN + "📋 [2] Listar Pedidos" + ANSI_RESET); //
-            System.out.println(ANSI_RED + "❌ [3] Excluir Pedido" + ANSI_RESET); // (Changed color to RED for consistency)
-            System.out.println(ANSI_GREEN + "✏️ [4] Alterar Pedido" + ANSI_RESET); //
-            System.out.println(ANSI_YELLOW + "🔙 [0] Voltar ao Menu Principal" + ANSI_RESET); //
-            System.out.println(ANSI_BLUE + "============================" + ANSI_RESET); //
-            opcao = InputHelper.lerInt("Escolha uma opção: "); //
+            System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
+            System.out.println(ANSI_BLUE + "       MENU DE PEDIDOS" + ANSI_RESET);
+            System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "🛒 [1] Criar Pedido" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "📋 [2] Listar Pedidos" + ANSI_RESET);
+            System.out.println(ANSI_RED + "❌ [3] Excluir Pedido" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "✏️ [4] Alterar Pedido" + ANSI_RESET);
+            System.out.println(ANSI_YELLOW + "🔙 [0] Voltar ao Menu Principal" + ANSI_RESET);
+            System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
+            opcao = InputHelper.lerInt("Escolha uma opção: ");
 
             switch (opcao) {
-                case 1 -> criarPedido(); //
-                case 2 -> listarPedidos(); //
-                case 3 -> excluirPedido(); //
-                case 4 -> alterarPedido(); //
-                case 0 -> System.out.println(ANSI_GREEN + "Voltando ao menu principal..." + ANSI_RESET); //
-                default -> System.out.println(ANSI_RED + "Opção inválida!" + ANSI_RESET); //
+                case 1 -> criarPedido();
+                case 2 -> listarPedidos();
+                case 3 -> excluirPedido();
+                case 4 -> alterarPedido();
+                case 0 -> System.out.println(ANSI_GREEN + "Voltando ao menu principal..." + ANSI_RESET);
+                default -> System.out.println(ANSI_RED + "Opção inválida!" + ANSI_RESET);
             }
         } while (opcao != 0);
     }
 
     private static void criarPedido() {
-        System.out.println(ANSI_BLUE + "--------- Criando um Pedido ---------" + ANSI_RESET); //
+        System.out.println(ANSI_BLUE + "--------- Criando um Pedido ---------" + ANSI_RESET);
 
-        List<Cliente> clientes = ClienteController.listarClientes(); //
+        List<Cliente> clientes = ClienteController.listarClientes();
         if (clientes.isEmpty()) {
             System.out.println(ANSI_RED + "Nenhum cliente cadastrado. Cadastre um cliente antes de criar um pedido." + ANSI_RESET);
             return;
@@ -55,12 +54,12 @@ public class MenuPedido {
 
         System.out.println(ANSI_YELLOW + "Clientes disponíveis:" + ANSI_RESET);
         for (int i = 0; i < clientes.size(); i++) {
-            System.out.println("[" + (i + 1) + "] " + clientes.get(i).getNome() + " (CPF: " + clientes.get(i).getCpf() + ")"); //
+            System.out.println("[" + (i + 1) + "] " + clientes.get(i).getNome() + " (CPF: " + clientes.get(i).getCpf() + ")");
         }
-        String cpfCliente = InputHelper.lerString("Digite o CPF do cliente para o pedido: "); //
+        String cpfCliente = InputHelper.lerString("Digite o CPF do cliente para o pedido: ");
         Cliente clienteDoPedido = null;
         for (Cliente c : clientes) {
-            if (c.getCpf().equals(cpfCliente)) { //
+            if (c.getCpf().equals(cpfCliente)) {
                 clienteDoPedido = c;
                 break;
             }
@@ -71,7 +70,7 @@ public class MenuPedido {
             return;
         }
 
-        List<Produto> produtosDisponiveis = ProdutoController.listarProdutos(); //
+        List<Produto> produtosDisponiveis = ProdutoController.listarProdutos();
         if (produtosDisponiveis.isEmpty()) {
             System.out.println(ANSI_RED + "Nenhum produto cadastrado. Não é possível adicionar itens ao pedido." + ANSI_RESET);
             return;
@@ -82,29 +81,29 @@ public class MenuPedido {
         do {
             System.out.println(ANSI_YELLOW + "\nProdutos disponíveis para adicionar:" + ANSI_RESET);
             for (int i = 0; i < produtosDisponiveis.size(); i++) {
-                System.out.println("[" + (i + 1) + "] " + produtosDisponiveis.get(i)); //
+                System.out.println("[" + (i + 1) + "] " + produtosDisponiveis.get(i));
             }
-            int indiceProduto = InputHelper.lerInt("Escolha o número do produto: ") - 1; //
+            int indiceProduto = InputHelper.lerInt("Escolha o número do produto: ") - 1;
 
             if (indiceProduto < 0 || indiceProduto >= produtosDisponiveis.size()) {
                 System.out.println(ANSI_RED + "Seleção de produto inválida." + ANSI_RESET);
-                continuarAdicionando = InputHelper.lerString("Deseja tentar adicionar outro produto? (s/n): ").toLowerCase().charAt(0); //
+                continuarAdicionando = InputHelper.lerString("Deseja tentar adicionar outro produto? (s/n): ").toLowerCase().charAt(0);
                 continue;
             }
             Produto produtoSelecionado = produtosDisponiveis.get(indiceProduto);
 
-            int quantidade = InputHelper.lerInt("Digite a quantidade para " + produtoSelecionado.getNome() + ": "); //
+            int quantidade = InputHelper.lerInt("Digite a quantidade para " + produtoSelecionado.getNome() + ": ");
             if (quantidade <= 0) {
                 System.out.println(ANSI_RED + "Quantidade inválida." + ANSI_RESET);
-                continuarAdicionando = InputHelper.lerString("Deseja tentar adicionar outro produto? (s/n): ").toLowerCase().charAt(0); //
+                continuarAdicionando = InputHelper.lerString("Deseja tentar adicionar outro produto? (s/n): ").toLowerCase().charAt(0);
                 continue;
             }
 
-            ItemPedido item = new ItemPedido(produtoSelecionado, quantidade); //
+            ItemPedido item = new ItemPedido(produtoSelecionado, quantidade);
             itensDoPedido.add(item);
-            System.out.println(ANSI_GREEN + produtoSelecionado.getNome() + " adicionado ao pedido." + ANSI_RESET); //
+            System.out.println(ANSI_GREEN + produtoSelecionado.getNome() + " adicionado ao pedido." + ANSI_RESET);
 
-            continuarAdicionando = InputHelper.lerString("Deseja adicionar mais itens? (s/n): ").toLowerCase().charAt(0); //
+            continuarAdicionando = InputHelper.lerString("Deseja adicionar mais itens? (s/n): ").toLowerCase().charAt(0);
         } while (continuarAdicionando == 's');
 
         if (itensDoPedido.isEmpty()) {
@@ -112,13 +111,13 @@ public class MenuPedido {
             return;
         }
 
-        Pedido novoPedido = new Pedido(clienteDoPedido, itensDoPedido); //
-        PedidoController.criarPedido(novoPedido); //
+        Pedido novoPedido = new Pedido(clienteDoPedido, itensDoPedido);
+        PedidoController.criarPedido(novoPedido);
     }
 
     private static void excluirPedido() {
-        System.out.println(ANSI_BLUE + "--------- Excluindo um Pedido ---------" + ANSI_RESET); //
-        List<Pedido> pedidos = PedidoController.listarPedidos(); //
+        System.out.println(ANSI_BLUE + "--------- Excluindo um Pedido ---------" + ANSI_RESET);
+        List<Pedido> pedidos = PedidoController.listarPedidos();
 
         if (pedidos.isEmpty()) {
             System.out.println(ANSI_YELLOW + "Nenhum pedido para excluir." + ANSI_RESET);
@@ -127,19 +126,18 @@ public class MenuPedido {
 
         System.out.println(ANSI_YELLOW + "Pedidos existentes:" + ANSI_RESET);
         for (int i = 0; i < pedidos.size(); i++) {
-            // Assuming Pedido has getCliente(), getNome(), getData() for a summary
-             System.out.println("[" + (i + 1) + "] Pedido de " + pedidos.get(i).getCliente().getNome() + //
-                               " em " + pedidos.get(i).getData() + // Needs Pedido.getData()
-                               " - Valor: R$" + String.format("%.2f", pedidos.get(i).calcularValorTotal())); //
+             System.out.println("[" + (i + 1) + "] Pedido de " + pedidos.get(i).getCliente().getNome() +
+                               " em " + pedidos.get(i).getData() +
+                               " - Valor: R$" + String.format("%.2f", pedidos.get(i).calcularValorTotal()));
         }
 
-        int indicePedido = InputHelper.lerInt("Digite o número do pedido que deseja excluir: ") - 1; //
-        PedidoController.removerPedido(indicePedido); // Uses the modified removerPedido in PedidoController
+        int indicePedido = InputHelper.lerInt("Digite o número do pedido que deseja excluir: ") - 1;
+        PedidoController.removerPedido(indicePedido);
     }
 
     private static void alterarPedido() {
-        System.out.println(ANSI_BLUE + "--------- Alterando um Pedido ---------" + ANSI_RESET); //
-        List<Pedido> pedidos = PedidoController.listarPedidos(); //
+        System.out.println(ANSI_BLUE + "--------- Alterando um Pedido ---------" + ANSI_RESET);
+        List<Pedido> pedidos = PedidoController.listarPedidos();
 
         if (pedidos.isEmpty()) {
             System.out.println(ANSI_YELLOW + "Nenhum pedido para alterar." + ANSI_RESET);
@@ -148,10 +146,10 @@ public class MenuPedido {
 
         System.out.println(ANSI_YELLOW + "Pedidos existentes:" + ANSI_RESET);
          for (int i = 0; i < pedidos.size(); i++) {
-            System.out.println("[" + (i + 1) + "] " + pedidos.get(i)); // Uses Pedido.toString()
+            System.out.println("[" + (i + 1) + "] " + pedidos.get(i));
         }
 
-        int indicePedido = InputHelper.lerInt("Digite o número do pedido que deseja alterar: ") - 1; //
+        int indicePedido = InputHelper.lerInt("Digite o número do pedido que deseja alterar: ") - 1;
 
         if (indicePedido < 0 || indicePedido >= pedidos.size()) {
             System.out.println(ANSI_RED + "Seleção de pedido inválida." + ANSI_RESET);
@@ -162,52 +160,52 @@ public class MenuPedido {
 
         int opcaoAlteracao;
         do {
-            System.out.println(ANSI_BLUE + "\nAlterando Pedido de: " + pedidoParaAlterar.getCliente().getNome() + ANSI_RESET); //
-            System.out.println(pedidoParaAlterar.toString()); // Display current state of order
+            System.out.println(ANSI_BLUE + "\nAlterando Pedido de: " + pedidoParaAlterar.getCliente().getNome() + ANSI_RESET);
+            System.out.println(pedidoParaAlterar.toString());
             System.out.println(ANSI_GREEN + "[1] Adicionar Item" + ANSI_RESET);
             System.out.println(ANSI_RED + "[2] Remover Item" + ANSI_RESET);
             System.out.println(ANSI_YELLOW + "[0] Concluir Alterações" + ANSI_RESET);
-            opcaoAlteracao = InputHelper.lerInt("Escolha uma opção de alteração: "); //
+            opcaoAlteracao = InputHelper.lerInt("Escolha uma opção de alteração: ");
 
             switch (opcaoAlteracao) {
-                case 1: // Adicionar Item
-                    List<Produto> produtosDisponiveis = ProdutoController.listarProdutos(); //
+                case 1:
+                    List<Produto> produtosDisponiveis = ProdutoController.listarProdutos();
                     if (produtosDisponiveis.isEmpty()) {
                         System.out.println(ANSI_RED + "Nenhum produto disponível para adicionar." + ANSI_RESET);
                         break;
                     }
                     System.out.println(ANSI_YELLOW + "\nProdutos disponíveis para adicionar:" + ANSI_RESET);
                     for (int i = 0; i < produtosDisponiveis.size(); i++) {
-                        System.out.println("[" + (i + 1) + "] " + produtosDisponiveis.get(i)); //
+                        System.out.println("[" + (i + 1) + "] " + produtosDisponiveis.get(i));
                     }
-                    int indiceProdutoAdd = InputHelper.lerInt("Escolha o número do produto: ") - 1; //
+                    int indiceProdutoAdd = InputHelper.lerInt("Escolha o número do produto: ") - 1;
 
                     if (indiceProdutoAdd < 0 || indiceProdutoAdd >= produtosDisponiveis.size()) {
                         System.out.println(ANSI_RED + "Seleção de produto inválida." + ANSI_RESET);
                         break;
                     }
                     Produto produtoParaAdicionar = produtosDisponiveis.get(indiceProdutoAdd);
-                    int qtd = InputHelper.lerInt("Digite a quantidade para " + produtoParaAdicionar.getNome() + ": "); //
+                    int qtd = InputHelper.lerInt("Digite a quantidade para " + produtoParaAdicionar.getNome() + ": ");
                     if (qtd <= 0) {
                         System.out.println(ANSI_RED + "Quantidade inválida." + ANSI_RESET);
                         break;
                     }
-                    ItemPedido novoItem = new ItemPedido(produtoParaAdicionar, qtd); //
-                    pedidoParaAlterar.adicionarItem(novoItem); //
+                    ItemPedido novoItem = new ItemPedido(produtoParaAdicionar, qtd);
+                    pedidoParaAlterar.adicionarItem(novoItem);
                     System.out.println(ANSI_GREEN + "Item adicionado ao pedido." + ANSI_RESET);
                     break;
 
-                case 2: // Remover Item
-                    List<ItemPedido> itensNoPedido = pedidoParaAlterar.getItens(); // Needs Pedido.getItens()
+                case 2:
+                    List<ItemPedido> itensNoPedido = pedidoParaAlterar.getItens();
                     if (itensNoPedido.isEmpty()) {
                         System.out.println(ANSI_YELLOW + "O pedido não possui itens para remover." + ANSI_RESET);
                         break;
                     }
                     System.out.println(ANSI_YELLOW + "\nItens no pedido:" + ANSI_RESET);
                     for (int i = 0; i < itensNoPedido.size(); i++) {
-                        System.out.println("[" + (i + 1) + "] " + itensNoPedido.get(i)); //
+                        System.out.println("[" + (i + 1) + "] " + itensNoPedido.get(i));
                     }
-                    int indiceItemRemover = InputHelper.lerInt("Escolha o número do item para remover: ") - 1; //
+                    int indiceItemRemover = InputHelper.lerInt("Escolha o número do item para remover: ") - 1;
 
                     if (indiceItemRemover < 0 || indiceItemRemover >= itensNoPedido.size()) {
                         System.out.println(ANSI_RED + "Seleção de item inválida." + ANSI_RESET);
@@ -224,19 +222,19 @@ public class MenuPedido {
                     System.out.println(ANSI_RED + "Opção de alteração inválida!" + ANSI_RESET);
             }
         } while (opcaoAlteracao != 0);
-         System.out.println(ANSI_GREEN + "Pedido atualizado com sucesso!" + ANSI_RESET); // The object in the list is updated by reference
+         System.out.println(ANSI_GREEN + "Pedido atualizado com sucesso!" + ANSI_RESET);
     }
 
     private static void listarPedidos() {
-        System.out.println(ANSI_BLUE + "--------- Lista de Pedidos ---------" + ANSI_RESET); //
-        List<Pedido> pedidos = PedidoController.listarPedidos(); //
+        System.out.println(ANSI_BLUE + "--------- Lista de Pedidos ---------" + ANSI_RESET);
+        List<Pedido> pedidos = PedidoController.listarPedidos();
         if (pedidos.isEmpty()) {
             System.out.println(ANSI_YELLOW + "Nenhum pedido cadastrado." + ANSI_RESET);
             return;
         }
         for (int i = 0; i < pedidos.size(); i++) {
             System.out.println(ANSI_GREEN + "Pedido #" + (i + 1) + ANSI_RESET);
-            System.out.println(pedidos.get(i)); // Relies on a good Pedido.toString() method
+            System.out.println(pedidos.get(i));
             System.out.println(ANSI_BLUE + "---------------------------------" + ANSI_RESET);
         }
     }
