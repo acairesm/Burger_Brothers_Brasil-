@@ -101,32 +101,35 @@ public class MenuCliente {
             String cpf = clienteEncontrado.getCpf();
 
             switch (op) {
-                case 1:
+                case 1 -> {
                     String novoNome = InputHelper.lerString("Digite o novo nome: ");
                     ClienteController.editarNome(cpf, novoNome);
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     String novoTel = InputHelper.lerString("Digite o novo telefone: ");
                     ClienteController.editarTel(cpf, novoTel);
-                    break;
-                case 3:
+                }
+
+                case 3 -> {
                     String novaRua = InputHelper.lerString("Digite a nova rua: ");
                     ClienteController.editarRua(cpf, novaRua);
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     String novoNumero = InputHelper.lerString("Digite o novo número: ");
                     ClienteController.editarNumero(cpf, novoNumero);
-                    break;
-                case 5:
+                }
+
+                case 5 -> {
                     String novaCidade = InputHelper.lerString("Digite a nova cidade: ");
                     ClienteController.editarCidade(cpf, novaCidade);
-                    break;
-                case 6:
+                }
+
+                case 6 -> {
                     String novoEstado = InputHelper.lerString("Digite o novo estado: ");
                     ClienteController.editarEstado(cpf, novoEstado);
-                    break;
-                default:
-                    System.out.println(ANSI_RED + "Opção inválida!" + ANSI_RESET);
+                }
+
+                default-> System.out.println(ANSI_RED + "Opção inválida!" + ANSI_RESET);
             }
         }
     }
