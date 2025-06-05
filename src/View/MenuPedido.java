@@ -28,7 +28,7 @@ public class MenuPedido {
             System.out.println(ANSI_GREEN + "📋 [2] Listar Pedidos" + ANSI_RESET);
             System.out.println(ANSI_GREEN + "❌ [3] Excluir Pedido" + ANSI_RESET);
             System.out.println(ANSI_GREEN + "✏️ [4] Alterar Pedido" + ANSI_RESET);
-            System.out.println(ANSI_YELLOW + "🔙 [0] Voltar" + ANSI_RESET);
+            System.out.println(ANSI_YELLOW + "🔙 [0] Voltar ao Menu Principal" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
             opcao = InputHelper.lerInt("Escolha uma opção: ");
 
