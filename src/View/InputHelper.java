@@ -41,21 +41,7 @@ public class InputHelper {
     }
 
     public static boolean lerBoolean(String texto) {
-        boolean valido = false;
         boolean valor = false;
-        do {
-            System.out.print(texto + " (Sim/Não): ");
-            String input = scanner.nextLine().trim().toLowerCase();
-            if (input.equals("sim")) {
-                valor = true;
-                valido = true;
-            } else if (input.equals("não")) {
-                valor = false;
-                valido = true;
-            } else {
-                System.out.println("Digite 'Sim' ou 'Não'.");
-            }
-        } while (!valido);
         return valor;
     }
 }
