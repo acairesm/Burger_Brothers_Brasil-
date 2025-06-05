@@ -1,8 +1,12 @@
 package View;
 
 import Controller.ClienteController;
+import Controller.PagamentoController;
 import Model.Cliente;
 import Model.Endereco;
+import Model.Pagamento;
+
+import java.util.List;
 
 public class MenuCliente {
     public static final String ANSI_RESET = "\u001B[0m";
@@ -56,8 +60,13 @@ public class MenuCliente {
 
     private static void listarClientes() {
         System.out.println(ANSI_BLUE + "--------- Lista de Clientes ---------" + ANSI_RESET);
-        for (Cliente cliente : ClienteController.listarClientes()) {
-            System.out.println(cliente);
+        List<Cliente> Clientes = ClienteController.listarClientes();
+        if (Clientes.isEmpty()) {
+            System.out.println(ANSI_RED + "Nenhum cliente registrado." + ANSI_RESET);
+            return;
+        }
+        for (int i = 0; i < Clientes.size(); i++) {
+            System.out.println((i + 1) + ". " + Clientes.get(i));
         }
     }
 
