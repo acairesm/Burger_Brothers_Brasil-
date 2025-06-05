@@ -2,6 +2,9 @@ package View;
 
 import Controller.ProdutoController;
 import Model.Produto;
+import Model.Hamburguer;
+import Model.Bebida;
+import Model.Acompanhamento;
 
 import java.util.List;
 
@@ -12,7 +15,6 @@ public class MenuProduto {
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_RED = "\u001B[31m";
     private static final String ANSI_YELLOW = "\u001B[33m";
-
 
     public static void exibir() {
         int opcao;
@@ -49,19 +51,9 @@ public class MenuProduto {
         float preco = InputHelper.lerFloat("Preço: ");
 
         switch (tipo) {
-            case 1 -> {
-                String tipoCarne = InputHelper.lerString("Tipo de Carne: ");
-                boolean temQueijo = InputHelper.lerBoolean("Tem queijo? ");
-                ProdutoController.cadastrarHamburguer(nome, preco, tipoCarne, temQueijo);
-            }
-            case 2 -> {
-                boolean isAlcoolica = InputHelper.lerBoolean("É alcoolica? ");
-                ProdutoController.cadastrarBebida(nome, preco, isAlcoolica);
-            }
-            case 3 -> {
-                String tipoAcompanhamento = InputHelper.lerString("Tipo de Acompanhamento: ");
-                ProdutoController.cadastrarAcompanhamento(nome, preco, tipoAcompanhamento);
-            }
+            case 1 -> ProdutoController.cadastrarHamburguer(nome, preco);
+            case 2 -> ProdutoController.cadastrarBebida(nome, preco);
+            case 3 -> ProdutoController.cadastrarAcompanhamento(nome, preco);
             default -> System.out.println(ANSI_RED + "Tipo de produto inválido!" + ANSI_RESET);
         }
 
@@ -96,33 +88,42 @@ public class MenuProduto {
             return;
         }
 
-        Produto produto = produtos.get(indice);
+        Produto produtoAtual = produtos.get(indice);
 
-        System.out.println(ANSI_YELLOW + "Você está editando o produto: " + produto.getNome() + ANSI_RESET);
-        String novoNome = InputHelper.lerString("Novo nome (deixe em branco para manter \"" + produto.getNome() + "\"): ");
-        float novoPreco = InputHelper.lerFloat("Novo preço (digite -1 para manter R$ " + produto.getPreco() + "): ");
+        System.out.println(ANSI_YELLOW + "Você está editando o produto: " + produtoAtual.getNome() + ANSI_RESET);
+        String novoNome = InputHelper.lerString("Novo nome (deixe em branco para manter \"" + produtoAtual.getNome() + "\"): ");
+        float novoPreco = InputHelper.lerFloat("Novo preço (digite -1 para manter R$ " + produtoAtual.getPreco() + "): ");
 
-        boolean alterado = false;
+        // Cria um novo produto com as alterações
+        String nomeFinal = novoNome.trim().isEmpty() ? produtoAtual.getNome() : novoNome.trim();
+        double precoFinal = novoPreco >= 0 ? novoPreco : produtoAtual.getPreco();
 
-        if (!novoNome.trim().isEmpty()) {
-            produto.setNome(novoNome.trim());
-            alterado = true;
-        }
+        // Verifica se houve alteração
+        if (!nomeFinal.equals(produtoAtual.getNome()) || precoFinal != produtoAtual.getPreco()) {
+            Produto produtoAtualizado;
 
-        if (novoPreco >= 0) {
-            produto.setPreco(novoPreco);
-            alterado = true;
-        }
+            // Verifica o tipo do produto e cria um novo objeto correspondente
+            if (produtoAtual instanceof Hamburguer) {
+                Hamburguer hamburguer = (Hamburguer) produtoAtual;
+                produtoAtualizado = new Hamburguer(nomeFinal, precoFinal);
+            } else if (produtoAtual instanceof Bebida) {
+                Bebida bebida = (Bebida) produtoAtual;
+                produtoAtualizado = new Bebida(nomeFinal, precoFinal);
+            } else if (produtoAtual instanceof Acompanhamento) {
+                Acompanhamento acompanhamento = (Acompanhamento) produtoAtual;
+                produtoAtualizado = new Acompanhamento(nomeFinal, precoFinal);
+            } else {
+                System.out.println(ANSI_RED + "Tipo de produto desconhecido!" + ANSI_RESET);
+                return;
+            }
 
-        if (alterado) {
-            ProdutoController.editarProduto(indice, produto); // <- aplica as alterações
+            // Atualiza a lista com o novo produto
+            ProdutoController.editarProduto(indice, produtoAtualizado);
             System.out.println(ANSI_GREEN + "Produto editado com sucesso!" + ANSI_RESET);
         } else {
             System.out.println(ANSI_YELLOW + "Nenhuma alteração foi feita no produto." + ANSI_RESET);
         }
     }
-
-
 
     private static void excluirProduto() {
         listarProdutos();

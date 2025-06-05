@@ -24,24 +24,21 @@ public class ProdutoController {
         return produtos;
     }
 
-    public static void cadastrarHamburguer(String nome, float preco, String tipoCarne, boolean temQueijo) {
-        Produto hamburguer = new Hamburguer(nome, preco, tipoCarne, temQueijo);
+    public static void cadastrarHamburguer(String nome, float preco) {
+        Produto hamburguer = new Hamburguer(nome, preco);
         cadastrarProduto(hamburguer);
     }
 
-    public static void cadastrarBebida(String nome, float preco, boolean isAlcoolica) {
-        Produto bebida = new Bebida(nome, preco, isAlcoolica);
+    public static void cadastrarBebida(String nome, float preco) {
+        Produto bebida = new Bebida(nome, preco);
         cadastrarProduto(bebida);
     }
 
-    public static void cadastrarAcompanhamento(String nome, float preco, String tipo) {
-        Produto acompanhamento = new Acompanhamento(nome, preco, tipo);
+    public static void cadastrarAcompanhamento(String nome, float preco) {
+        Produto acompanhamento = new Acompanhamento(nome, preco);
         cadastrarProduto(acompanhamento);
     }
 
-    public void editarProduto(Produto produto) {
-        // Implementar lógica para editar produto
-    }
 
     public static void deletarProduto(Produto produto) {
         produtos.remove(produto);

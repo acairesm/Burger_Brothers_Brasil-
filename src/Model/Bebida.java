@@ -1,12 +1,29 @@
 package Model;
 
 public class Bebida extends Produto {
-    public boolean isAlcoolica;
 
-    public Bebida(String nome, double preco, boolean isAlcoolica) {
+    public Bebida(String nome, double preco) {
         super(nome, preco);
-        this.isAlcoolica = isAlcoolica;
     }
 
-    // Getters e Setters (opcional)
+    @Override
+    public double getPreco() {
+        return super.getPreco();
+    }
+
+    @Override
+    public String getNome() {
+        return super.getNome();
+    }
+
+    @Override
+    public void setNome(String novoNome) {
+        super.setNome(novoNome);
+    }
+
+    @Override
+    public void setPreco(float novoPreco) {
+        super.setPreco(novoPreco);
+    }
+
 }
