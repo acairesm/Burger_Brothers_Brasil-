@@ -10,6 +10,8 @@ public class MenuCliente {
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_RED = "\u001B[31m";
     private static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+
 
     public static void exibir() {
         int opcao = 0;
@@ -18,9 +20,9 @@ public class MenuCliente {
             System.out.println(ANSI_BLUE + "       MENU CLIENTES" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
             System.out.println(ANSI_GREEN + "👤 [1] Cadastrar Cliente" + ANSI_RESET);
-            System.out.println(ANSI_GREEN + "📋 [2] Listar Clientes" + ANSI_RESET);
-            System.out.println(ANSI_RED + "❌ [3] Excluir Cliente" + ANSI_RESET);
-            System.out.println(ANSI_GREEN + "✏️ [4] Mudar Infos do Cliente" + ANSI_RESET);
+            System.out.println(ANSI_PURPLE + "📋 [2] Listar Clientes" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "✏️ [3] Mudar Infos do Cliente;" + ANSI_RESET);
+            System.out.println(ANSI_RED + "❌  [4] Excluir Cliente" + ANSI_RESET);
             System.out.println(ANSI_YELLOW + "🔙 [0] Voltar ao Menu Principal" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
             opcao = InputHelper.lerInt("Escolha uma opção: ");
@@ -28,8 +30,8 @@ public class MenuCliente {
             switch (opcao) {
                 case 1 -> cadastrarCliente();
                 case 2 -> listarClientes();
-                case 3 -> excluirCliente();
-                case 4 -> mudarInfos();
+                case 3 -> mudarInfos();
+                case 4 -> excluirCliente();
                 case 0 -> System.out.println(ANSI_GREEN + "Voltando ao menu principal..." + ANSI_RESET);
                 default -> System.out.println(ANSI_RED + "Opção inválida!" + ANSI_RESET);
             }

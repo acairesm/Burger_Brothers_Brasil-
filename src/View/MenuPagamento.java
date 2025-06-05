@@ -13,6 +13,7 @@ public class MenuPagamento {
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
 
     public static void exibir() {
         int opcao;
@@ -21,7 +22,7 @@ public class MenuPagamento {
             System.out.println(ANSI_BLUE + "       MENU PAGAMENTO" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "==========================" + ANSI_RESET);
             System.out.println(ANSI_GREEN + "💳 [1] Processar Pagamento" + ANSI_RESET);
-            System.out.println(ANSI_GREEN + "📜 [2] Histórico de Pagamentos" + ANSI_RESET);
+            System.out.println(ANSI_PURPLE + "📜 [2] Histórico de Pagamentos" + ANSI_RESET);
             System.out.println(ANSI_RED + "🔄 [3] Reembolsar Pagamento" + ANSI_RESET);
             System.out.println(ANSI_YELLOW + "🔙 [0] Voltar ao Menu Principal" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "==========================" + ANSI_RESET);
