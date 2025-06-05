@@ -73,7 +73,7 @@ public class MenuCliente {
             System.out.println(ANSI_GREEN + "Telefone: " + ANSI_RESET + cliente.getTelefone());
 
             Endereco e = cliente.getEndereco();
-            String enderecoFormatado = String.format("%s, %s, %s - %s", e.getRua(), e.getNumero(), e.getCidade(), e.getEstado());
+            String enderecoFormatado = String.format("%s, %s, %s , %s", e.getRua(), e.getNumero(), e.getCidade(), e.getEstado());
             System.out.println(ANSI_GREEN + "Endereço: " + ANSI_RESET + enderecoFormatado);
 
             int quantidadePedidos = cliente.getHistoricoPedidos().size();
