@@ -11,6 +11,7 @@ public class MenuCliente {
     public static final String ANSI_RED = "\u001B[31m";
     private static final String ANSI_YELLOW = "\u001B[33m";
     public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
 
 
     public static void exibir() {
@@ -21,9 +22,9 @@ public class MenuCliente {
             System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
             System.out.println(ANSI_GREEN + "👤 [1] Cadastrar Cliente" + ANSI_RESET);
             System.out.println(ANSI_PURPLE + "📋 [2] Listar Clientes" + ANSI_RESET);
-            System.out.println(ANSI_GREEN + "✏️ [3] Mudar Infos do Cliente;" + ANSI_RESET);
-            System.out.println(ANSI_RED + "❌  [4] Excluir Cliente" + ANSI_RESET);
-            System.out.println(ANSI_YELLOW + "🔙 [0] Voltar ao Menu Principal" + ANSI_RESET);
+            System.out.println(ANSI_YELLOW + "✏️ [3] Mudar Infos do Cliente;" + ANSI_RESET);
+            System.out.println(ANSI_RED + "❌ [4] Excluir Cliente" + ANSI_RESET);
+            System.out.println(ANSI_CYAN + "🔙 [0] Voltar ao Menu Principal" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "============================" + ANSI_RESET);
             opcao = InputHelper.lerInt("Escolha uma opção: ");
 
