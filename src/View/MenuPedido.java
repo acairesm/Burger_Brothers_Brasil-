@@ -115,7 +115,11 @@ public class MenuPedido {
 
         Pedido novoPedido = new Pedido(clienteDoPedido, itensDoPedido);
         PedidoController.criarPedido(novoPedido);
+
+        clienteDoPedido.adicionarPedido(novoPedido);
+        System.out.println(ANSI_GREEN + "Pedido criado e adicionado ao histórico do cliente!" + ANSI_RESET);
     }
+
 
     private static void excluirPedido() {
         System.out.println(ANSI_BLUE + "--------- Excluindo um Pedido ---------" + ANSI_RESET);
@@ -235,9 +239,20 @@ public class MenuPedido {
             return;
         }
         for (int i = 0; i < pedidos.size(); i++) {
+            Pedido pedido = pedidos.get(i);
             System.out.println(ANSI_GREEN + "Pedido #" + (i + 1) + ANSI_RESET);
-            System.out.println(pedidos.get(i));
+            System.out.println("Cliente: " + pedido.getCliente().getNome());
+            System.out.println("Data: " + pedido.getData());
+            System.out.println("Itens do Pedido:");
+            for (ItemPedido item : pedido.getItens()) {
+                System.out.println("- " + item.getProduto().getNome() + " (Quantidade: " + item.getQuantidade() + ")");
+            }
+            System.out.println("Valor Total: R$" + String.format("%.2f", pedido.calcularValorTotal()));
             System.out.println(ANSI_BLUE + "---------------------------------" + ANSI_RESET);
         }
     }
+
+
+
+
 }

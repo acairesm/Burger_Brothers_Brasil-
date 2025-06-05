@@ -17,6 +17,14 @@ public class ItemPedido {
     public String toString() {
         return "Item: " + produto.getNome() + ", Quantidade: " + quantidade + ", Subtotal: " + calcularSubtotal();
     }
+
+    public ItemCardapio getProduto() {
+        return produto;
+    }
+
+    public int  getQuantidade() {
+        return quantidade;
+    }
 }
 
 
