@@ -1,6 +1,8 @@
 package Controller;
 
 import Model.Pedido;
+import Util.LoggerService;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,16 +15,19 @@ public class PedidoController {
 
     public static void criarPedido(Pedido pedido) {
         pedidos.add(pedido);
+        LoggerService.log("CREATE: Pedido criado para o cliente " + pedido.getCliente().getNome() + " (CPF: " + pedido.getCliente().getCpf() + ")");
         System.out.println(ANSI_GREEN + "Pedido criado com sucesso! " + ANSI_RESET);
     }
 
     public static List<Pedido> listarPedidos() {
+        LoggerService.log("READ: Listagem de pedidos solicitada.");
         return pedidos;
     }
 
     public static void removerPedido(int indice) {
         if (indice >= 0 && indice < pedidos.size()) {
             Pedido pedidoRemovido = pedidos.get(indice);
+            LoggerService.log("DELETE: Pedido de " + pedidoRemovido.getCliente().getNome() + " removido.");
             pedidos.remove(indice);
             System.out.println(ANSI_GREEN + "Pedido de " + pedidoRemovido.getCliente().getNome() +
                                " realizado em " + pedidoRemovido.getData() + " removido com sucesso!" + ANSI_RESET);
@@ -30,6 +35,4 @@ public class PedidoController {
             System.out.println(ANSI_RED + "Índice de pedido inválido!" + ANSI_RESET);
         }
     }
-
-
 }

@@ -1,9 +1,11 @@
 package Controller;
 
-import Model.Produto;
-import Model.Hamburguer;
-import Model.Bebida;
 import Model.Acompanhamento;
+import Model.Bebida;
+import Model.Hamburguer;
+import Model.Produto;
+import Util.LoggerService;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,11 +14,13 @@ public class ProdutoController {
 
     public static void cadastrarProduto(Produto produto) {
         produtos.add(produto);
+        LoggerService.log("CREATE: Produto cadastrado - Nome: " + produto.getNome() + ", Preço: " + produto.getPreco());
     }
 
     public static void editarProduto(int indice, Produto produtoAtualizado) {
         if (indice >= 0 && indice < produtos.size()) {
             produtos.set(indice, produtoAtualizado);
+            LoggerService.log("UPDATE: Produto editado - Índice: " + indice + ", Novo Nome: " + produtoAtualizado.getNome());
         }
     }
 
@@ -41,6 +45,7 @@ public class ProdutoController {
 
 
     public static void deletarProduto(Produto produto) {
+        LoggerService.log("DELETE: Produto deletado - Nome: " + produto.getNome());
         produtos.remove(produto);
     }
 }

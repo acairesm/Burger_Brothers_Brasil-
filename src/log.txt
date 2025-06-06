@@ -1,0 +1,10 @@
+2025/06/06 12:46:13 - CREATE: Pagamento registrado - Pagamento: R$ 15.0, Método: Dinheiro
+2025/06/06 12:46:54 - CREATE: Cliente cadastrado - CPF: 123456789, Nome: Leonardo
+2025/06/06 12:46:58 - READ: Listagem de clientes solicitada.
+2025/06/06 12:47:15 - UPDATE: Cidade do cliente com CPF 123456789 atualizada.
+2025/06/06 12:47:33 - CREATE: Produto cadastrado - Nome: xtudo, Preço: 20.0
+2025/06/06 12:47:46 - READ: Listagem de produtos solicitada.
+2025/06/06 12:47:57 - READ: Listagem de clientes solicitada.
+2025/06/06 12:48:01 - READ: Listagem de produtos solicitada.
+2025/06/06 12:48:12 - CREATE: Pedido criado para o cliente Leonardo (CPF: 123456789)
+2025/06/06 12:48:31 - CREATE: Pagamento registrado - Pagamento: R$ 15.0, Método: Dinheiro

@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.Pagamento;
+import Util.LoggerService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,10 +11,12 @@ public class PagamentoController {
 
     public static void adicionarPagamento(Pagamento pagamento) {
         pagamentos.add(pagamento);
+        LoggerService.log("CREATE: Pagamento registrado - " + pagamento.toString());
         System.out.println("Pagamento registrado com sucesso!");
     }
 
     public static List<Pagamento> listarPagamentos() {
+        LoggerService.log("READ: Listagem de pagamentos solicitada.");
         return pagamentos;
     }
 
@@ -27,8 +30,8 @@ public class PagamentoController {
     }
 
     public static void reembolsarPagamento(int indice) {
-        // Implementar lógica de reembolso
         if (indice >= 0 && indice < pagamentos.size()) {
+            LoggerService.log("DELETE: Pagamento reembolsado e removido - " + pagamentos.get(indice).toString());
             System.out.println("Pagamento reembolsado: " + pagamentos.get(indice));
             removerPagamento(indice);
         } else {
