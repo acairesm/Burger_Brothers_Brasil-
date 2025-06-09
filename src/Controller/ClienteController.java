@@ -50,9 +50,6 @@ public class ClienteController {
                 break;
             }
         }
-        if (!encontrado){
-            System.out.println(ANSI_RED + "Cliente com cpf "+cpfedit+" nao encontrado! "+ ANSI_RESET);
-        }
     }
 
     public static void editarNome(String cpfedit , String n ) {
@@ -65,9 +62,6 @@ public class ClienteController {
                 encontrado=true;
                 break;
             }
-        }
-        if (!encontrado){
-            System.out.println(ANSI_RED + "Cliente com cpf "+cpfedit+" nao encontrado! "+ ANSI_RESET);
         }
     }
 
@@ -82,9 +76,6 @@ public class ClienteController {
                 break;
             }
         }
-        if (!encontrado){
-            System.out.println(ANSI_RED + "Cliente com cpf "+cpfedit+" nao encontrado! "+ ANSI_RESET);
-        }
     }
 
     public static void editarNumero(String cpfedit, String numero) {
@@ -97,9 +88,6 @@ public class ClienteController {
                 encontrado=true;
                 break;
             }
-        }
-        if (!encontrado){
-            System.out.println(ANSI_RED + "Cliente com cpf "+cpfedit+" nao encontrado! "+ ANSI_RESET);
         }
     }
 
@@ -114,9 +102,6 @@ public class ClienteController {
                 break;
             }
         }
-        if (!encontrado){
-            System.out.println(ANSI_RED + "Cliente com cpf "+cpfedit+" nao encontrado! "+ ANSI_RESET);
-        }
     }
 
     public static void editarEstado(String cpfedit, String estado) {
@@ -129,9 +114,6 @@ public class ClienteController {
                 encontrado=true;
                 break;
             }
-        }
-        if (!encontrado){
-            System.out.println(ANSI_RED + "Cliente com cpf "+cpfedit+" nao encontrado! "+ ANSI_RESET);
         }
     }
 }
