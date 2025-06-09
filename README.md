@@ -92,7 +92,7 @@ A utilização da IA visou acelerar o desenvolvimento, reforçar boas práticas 
 - [**Lorenzo Garcia Pedrozo**](https://github.com/LoPedrozo) – Módulo de Cliente  
 - [**André Caires**](https://github.com/acairesm) – Módulo de Produto e Cardápio  
 - [**Aslam Rekik**](https://github.com/aslamrekik) – Módulo de Pedido e Pagamento  
-- [**Leonardo Herédia**](https://github.com/leonardoheredia) – Apoio geral e melhorias
+- [**Leonardo Herédia**](https://github.com/LeoHeredia2004) – Apoio geral e melhorias
 
 ---
 
