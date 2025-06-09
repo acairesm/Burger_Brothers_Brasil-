@@ -3,3 +3,33 @@
 2025/06/06 17:35:08 - CREATE: Produto cadastrado - Nome: coca, Preço: 5.0
 2025/06/06 17:35:36 - CREATE: Pedido criado para o cliente aslam (CPF: 1)
 2025/06/06 17:35:42 - READ: Listagem de pedidos solicitada.
+2025/06/09 17:40:03 - CREATE: Cliente cadastrado - CPF: 1, Nome: aslam
+2025/06/09 17:40:21 - CREATE: Cliente cadastrado - CPF: 2, Nome: lorenzo
+2025/06/09 17:44:42 - CREATE: Cliente cadastrado - CPF: 1, Nome: aslam
+2025/06/09 17:44:51 - CREATE: Cliente cadastrado - CPF: 2, Nome: lore
+2025/06/09 17:49:45 - CREATE: Cliente cadastrado - CPF: 1, Nome: aslam
+2025/06/09 17:49:52 - CREATE: Cliente cadastrado - CPF: 2, Nome: lor
+2025/06/09 17:51:16 - CREATE: Cliente cadastrado - CPF: 1, Nome: aslam
+2025/06/09 17:51:23 - CREATE: Cliente cadastrado - CPF: 2, Nome: qsd
+2025/06/09 17:53:40 - CREATE: Cliente cadastrado - CPF: 1, Nome: qsd
+2025/06/09 17:53:46 - CREATE: Cliente cadastrado - CPF: 2, Nome: qsd
+2025/06/09 17:54:04 - UPDATE: Nome do cliente com CPF 2 atualizado.
+2025/06/09 17:54:16 - UPDATE: Nome do cliente com CPF 1 atualizado.
+2025/06/09 17:54:30 - DELETE: Cliente com CPF 1 deletado.
+2025/06/09 17:55:00 - CREATE: Produto cadastrado - Nome: cheese burguer, Preço: 40.0
+2025/06/09 17:55:08 - CREATE: Produto cadastrado - Nome: beef , Preço: 50.0
+2025/06/09 17:55:15 - CREATE: Produto cadastrado - Nome: coca, Preço: 5.0
+2025/06/09 17:56:02 - UPDATE: Produto editado - Índice: 0, Novo Nome: cheese burguer
+2025/06/09 17:56:13 - DELETE: Produto deletado - Nome: beef 
+2025/06/09 17:57:02 - CREATE: Pedido criado para o cliente lorenzo (CPF: 2)
+2025/06/09 17:57:14 - READ: Listagem de pedidos solicitada.
+2025/06/09 17:57:40 - CREATE: Pedido criado para o cliente lorenzo (CPF: 2)
+2025/06/09 17:57:41 - READ: Listagem de pedidos solicitada.
+2025/06/09 17:57:52 - READ: Listagem de pedidos solicitada.
+2025/06/09 17:58:26 - READ: Listagem de pedidos solicitada.
+2025/06/09 17:59:58 - READ: Listagem de pagamentos solicitada.
+2025/06/09 18:00:04 - READ: Listagem de pagamentos solicitada.
+2025/06/09 18:03:26 - CREATE: Pagamento registrado - Pagamento: R$ 160.0, Método: Cartão
+2025/06/09 18:03:29 - READ: Listagem de pagamentos solicitada.
+2025/06/09 18:03:56 - READ: Listagem de pagamentos solicitada.
+2025/06/09 18:03:56 - READ: Listagem de pagamentos solicitada.
