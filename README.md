@@ -89,10 +89,10 @@ A utilização da IA visou acelerar o desenvolvimento, reforçar boas práticas 
 
 ## 👥 Autores
 
-- [**Lorenzo Garcia Pedrozo**](https://github.com/LoPedrozo) – Módulo de Cliente  
-- [**André Caires**](https://github.com/acairesm) – Módulo de Produto e Cardápio  
-- [**Aslam Rekik**](https://github.com/aslamrekik) – Módulo de Pedido e Pagamento  
-- [**Leonardo Herédia**](https://github.com/LeoHeredia2004) – Apoio geral e melhorias
+- [**Lorenzo Garcia Pedrozo**](https://github.com/LoPedrozo) – Organização Geral de Todas as Classes do Projeto, melhorias na interface dos menus e CriaÇão do README
+- [**André Caires**](https://github.com/acairesm) – Módulu Produto, Pagamento e Correções de Bugs no Sistema
+- [**Aslam Rekik**](https://github.com/aslamrekik) – Módulo Cliente, Menu Principal e Correções de Bugs no Sistema
+- [**Leonardo Herédia**](https://github.com/LeoHeredia2004) – Logs, Salvamentos em arquivos e Módulo Pedidos
 
 ---
 
