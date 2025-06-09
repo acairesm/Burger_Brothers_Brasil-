@@ -33,3 +33,14 @@
 2025/06/09 18:03:29 - READ: Listagem de pagamentos solicitada.
 2025/06/09 18:03:56 - READ: Listagem de pagamentos solicitada.
 2025/06/09 18:03:56 - READ: Listagem de pagamentos solicitada.
+2025/06/09 14:55:52 - READ: Listagem de pedidos solicitada.
+2025/06/09 14:55:52 - READ: Listagem de pedidos solicitada.
+2025/06/09 14:55:52 - READ: Listagem de pagamentos solicitada.
+2025/06/09 14:55:52 - READ: Listagem de pagamentos solicitada.
+2025/06/09 14:56:00 - READ: Listagem de pedidos solicitada.
+2025/06/09 14:57:02 - READ: Listagem de pedidos solicitada.
+2025/06/09 14:57:02 - READ: Listagem de pedidos solicitada.
+2025/06/09 14:57:02 - READ: Listagem de pagamentos solicitada.
+2025/06/09 14:57:02 - READ: Listagem de pagamentos solicitada.
+2025/06/09 14:57:39 - CREATE: Cliente cadastrado - CPF: 2, Nome: a
+2025/06/09 14:57:55 - DELETE: Cliente com CPF 2 deletado.
