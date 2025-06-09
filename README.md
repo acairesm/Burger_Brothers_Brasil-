@@ -1,7 +1,7 @@
 
 # 🍔 Burger Brothers Brazil 🍔
 
-- THE BEST BURGER IN THE WORLD
+**THE BEST BURGER IN THE WORLD**
 
 Projeto acadêmico desenvolvido em Java com o objetivo de simular um sistema de gerenciamento de um restaurante especializado em hambúrgueres. O sistema contempla funcionalidades de cadastro e gestão de clientes, produtos, pedidos e pagamentos, utilizando princípios sólidos de Programação Orientada a Objetos.
 
@@ -56,44 +56,43 @@ Desenvolver um sistema completo em **Java puro** que simule a operação de um r
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/acairesm/Burger_Brothers_Brasil-.git 
-2.Abra o projeto em uma IDE como IntelliJ IDEA, Eclipse ou VS Code com suporte a Java.
+   git clone https://github.com/acairesm/Burger_Brothers_Brasil-.git
+   ```
+2. **Abra o projeto** em uma IDE como IntelliJ IDEA, Eclipse ou VS Code com suporte a Java.
 
-3.Execute a classe Main.java localizada no pacote main.
+3. **Execute a classe `Main.java`** localizada no pacote `main`.
+
+> ⚠️ Os dados são salvos localmente em arquivos `.txt`. Não é necessário banco de dados.
 
 ---
 
-## 🤖 Uso do ChatGPT & Blackboxai
+## 🤖 Uso do ChatGPT & Blackbox AI
 
-O ChatGPT & Blackboxai foi utilizado como assistente de desenvolvimento para:
+O **ChatGPT** e o **Blackbox AI** foram utilizados como assistentes de desenvolvimento para:
 
-- Modelagem de classes com base em requisitos fornecidos
+- Modelagem de classes com base nos requisitos fornecidos
+- Revisão de padrões de projeto (como MVC) e boas práticas
+- Suporte na criação deste arquivo `README.md`
+- Sugestões para organização de pacotes, validações e estruturação do código
 
-- Revisão de padrões de projeto (MVC) e aplicação de boas práticas
-
-- Suporte na Criação deste arquivo README.md conforme instruções acadêmicas
-
-- Sugestões de nomes de pacotes, validações e melhorias na estrutura do código
-
-O uso da IA teve como foco auxiliar no aprendizado, manter boas práticas e otimizar tempo, sem comprometer a autoria do código.
+A utilização da IA visou acelerar o desenvolvimento, reforçar boas práticas e apoiar o aprendizado, sem comprometer a autoria do projeto.
 
 ---
 
 ## 📚 Referências e Recursos
 
-- Exemplos e tutoriais de boas práticas em repositórios GitHub
-
-- ChatGPT (OpenAI) & Blackboxai para auxílio em estruturação e documentação
+- Documentação oficial do Java
+- Exemplos e tutoriais sobre boas práticas no GitHub
+- [ChatGPT (OpenAI)](https://chat.openai.com) & [Blackbox AI](https://www.useblackbox.io)
 
 ---
 
 ## 👥 Autores
 
-Lorenzo Garcia Pedrozo 
+- [**Lorenzo Garcia Pedrozo**](https://github.com/lorenzopedrozo) – Módulo de Cliente  
+- [**André Caires**](https://github.com/acairesm) – Módulo de Produto e Cardápio  
+- [**Aslam Rekik**](https://github.com/aslamrekik) – Módulo de Pedido e Pagamento  
+- [**Leonardo Herédia**](https://github.com/leonardoheredia) – Apoio geral e melhorias
 
-André Caires 
-
-Aslam Rekik
-
-Leonardo Herédia
+---
 
