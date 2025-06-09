@@ -1,0 +1,5 @@
+2025/06/06 17:34:46 - CREATE: Cliente cadastrado - CPF: 1, Nome: aslam
+2025/06/06 17:35:00 - CREATE: Produto cadastrado - Nome: cheese, Preço: 10.0
+2025/06/06 17:35:08 - CREATE: Produto cadastrado - Nome: coca, Preço: 5.0
+2025/06/06 17:35:36 - CREATE: Pedido criado para o cliente aslam (CPF: 1)
+2025/06/06 17:35:42 - READ: Listagem de pedidos solicitada.
