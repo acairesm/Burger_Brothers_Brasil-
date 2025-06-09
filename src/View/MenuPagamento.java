@@ -69,7 +69,10 @@ public class MenuPagamento {
 
     private static void reembolsarPagamento() {
         listarPagamentos();
-        int indice = InputHelper.lerInt("Escolha o número do pagamento que deseja reembolsar: ") - 1;
-        PagamentoController.reembolsarPagamento(indice);
+        List<Pagamento> pagamentos = PagamentoController.listarPagamentos();
+        if (!pagamentos.isEmpty()){
+            int indice = InputHelper.lerInt("Escolha o número do pagamento que deseja reembolsar: ") - 1;
+            PagamentoController.reembolsarPagamento(indice);
+        }
     }
 }
