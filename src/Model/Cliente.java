@@ -3,7 +3,9 @@ package Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cliente extends Pessoa {
+import java.io.Serializable;
+
+public class Cliente extends Pessoa implements Serializable{
     private List<Pedido> historicoPedidos;
 
     public Cliente(String cpf,String nome, String telefone, Endereco endereco) {

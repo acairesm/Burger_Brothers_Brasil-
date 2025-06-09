@@ -24,7 +24,6 @@ public class LoggerService {
             LocalDateTime now = LocalDateTime.now();
             pw.println(dtf.format(now) + " - " + message);
         } catch (IOException e) {
-            // Em uma aplicação real, um tratamento de erro mais robusto seria necessário.
             System.err.println("Erro ao escrever no arquivo de log: " + e.getMessage());
         }
     }

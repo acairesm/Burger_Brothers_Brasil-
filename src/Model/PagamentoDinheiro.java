@@ -1,6 +1,7 @@
 package Model;
+import java.io.Serializable;
 
-public class PagamentoDinheiro extends Pagamento {
+public class PagamentoDinheiro extends Pagamento implements Serializable{
     public PagamentoDinheiro(double valor) {
         super(valor, "Dinheiro");
     }
