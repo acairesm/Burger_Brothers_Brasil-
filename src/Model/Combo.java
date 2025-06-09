@@ -2,8 +2,9 @@ package Model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
 
-public class Combo extends Produto {
+public class Combo extends Produto implements Serializable{
     private List<Produto> produtos;
 
     public Combo(String nome, double preco) {

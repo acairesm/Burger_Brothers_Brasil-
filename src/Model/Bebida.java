@@ -1,6 +1,7 @@
 package Model;
+import java.io.Serializable;
 
-public class Bebida extends Produto {
+public class Bebida extends Produto implements Serializable{
 
     public Bebida(String nome, double preco) {
         super(nome, preco);

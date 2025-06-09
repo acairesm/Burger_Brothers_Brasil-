@@ -1,6 +1,7 @@
 package Model;
+import java.io.Serializable;
 
-public abstract class Pessoa {
+public abstract class Pessoa implements Serializable {
     protected String cpf;
     protected String nome;
     protected String telefone;

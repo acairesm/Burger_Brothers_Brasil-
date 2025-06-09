@@ -1,6 +1,7 @@
 package Model;
+import java.io.Serializable;
 
-public class Acompanhamento extends Produto {
+public class Acompanhamento extends Produto implements Serializable {
     public String tipo;
 
     public Acompanhamento(String nome, double preco) {

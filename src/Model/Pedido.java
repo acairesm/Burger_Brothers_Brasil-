@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Pedido {
+import java.io.Serializable;
+
+public class Pedido implements Serializable{
     private Cliente cliente;
     private List<ItemPedido> itens;
     private Date data;
