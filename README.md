@@ -81,12 +81,6 @@ O uso da IA teve como foco auxiliar no aprendizado, manter boas práticas e otim
 
 ## 📚 Referências e Recursos
 
-- Documentação oficial do Java: https://docs.oracle.com/en/java/
-
-- Apostilas da Alura: https://www.alura.com.br
-
-- Curso em Vídeo – Java POO: https://www.cursoemvideo.com
-
 - Exemplos e tutoriais de boas práticas em repositórios GitHub
 
 - ChatGPT (OpenAI) & Blackboxai para auxílio em estruturação e documentação
