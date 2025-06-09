@@ -1,10 +1,10 @@
 package View;
 
 import Controller.PagamentoController;
-import Model.Pagamento;
-import Model.PagamentoCartao;
-import Model.PagamentoDinheiro;
+import Controller.PedidoController;
+import Model.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MenuPagamento {
@@ -14,6 +14,7 @@ public class MenuPagamento {
     public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
+    private static final String ANSI_YELLOW = "\u001B[33m";
 
     public static void exibir() {
         int opcao;
@@ -39,9 +40,21 @@ public class MenuPagamento {
     }
 
     private static void processarPagamento() {
+        System.out.println(ANSI_BLUE + "--------- Lista de pedidos a pagar---------" + ANSI_RESET);
+        List<Pedido> pedidos = PedidoController.listarPedidos();
+        if (pedidos.isEmpty()) {
+            System.out.println(ANSI_YELLOW + "Nenhum pedido cadastrado." + ANSI_RESET);
+            return;
+        }
+        for (int i = 0; i < pedidos.size(); i++) {
+            Pedido pedido = pedidos.get(i);
+            System.out.println(ANSI_GREEN + "Pedido #" + (i + 1) + ANSI_RESET);
+            System.out.println("Cliente: " + pedido.getCliente().getNome());
+            System.out.println("Valor Total: R$" + String.format("%.2f", pedido.calcularValorTotal()));
+            System.out.println(ANSI_BLUE + "---------------------------------" + ANSI_RESET);
+        }
         float valor = InputHelper.lerFloat("Digite o valor do pagamento: ");
         String metodo = InputHelper.lerString("Digite o método de pagamento (Cartão, Dinheiro): ");
-
         Pagamento pagamento;
         if (metodo.equalsIgnoreCase("Cartão")) {
             pagamento = new PagamentoCartao(valor);
@@ -51,7 +64,6 @@ public class MenuPagamento {
             System.out.println(ANSI_RED + "Método de pagamento inválido!" + ANSI_RESET);
             return;
         }
-
         PagamentoController.processarPagamento(pagamento);
     }
 

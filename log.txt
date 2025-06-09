@@ -33,3 +33,41 @@
 2025/06/09 18:03:29 - READ: Listagem de pagamentos solicitada.
 2025/06/09 18:03:56 - READ: Listagem de pagamentos solicitada.
 2025/06/09 18:03:56 - READ: Listagem de pagamentos solicitada.
+2025/06/09 18:46:30 - CREATE: Cliente cadastrado - CPF: 1, Nome: aslam
+2025/06/09 18:46:45 - CREATE: Produto cadastrado - Nome: cheese burger, Preço: 40.0
+2025/06/09 18:46:54 - CREATE: Produto cadastrado - Nome: coca, Preço: 6.0
+2025/06/09 18:47:19 - CREATE: Pedido criado para o cliente aslam (CPF: 1)
+2025/06/09 18:47:34 - READ: Listagem de pedidos solicitada.
+2025/06/09 18:47:45 - READ: Listagem de pedidos solicitada.
+2025/06/09 18:47:55 - CREATE: Pagamento registrado - Pagamento: R$ 86.0, Método: Cartão
+2025/06/09 18:48:06 - READ: Listagem de pagamentos solicitada.
+2025/06/09 18:48:34 - READ: Listagem de pedidos solicitada.
+2025/06/09 19:04:25 - CREATE: Cliente cadastrado - CPF: 1, Nome: aslam
+2025/06/09 19:04:34 - CREATE: Produto cadastrado - Nome: cheese, Preço: 70.0
+2025/06/09 19:04:47 - CREATE: Pedido criado para o cliente aslam (CPF: 1)
+2025/06/09 19:05:00 - READ: Listagem de pedidos solicitada.
+2025/06/09 19:05:13 - CREATE: Pagamento registrado - Pagamento: R$ 140.0, Método: Dinheiro
+2025/06/09 19:05:24 - READ: Listagem de pagamentos solicitada.
+2025/06/09 19:07:13 - CREATE: Pedido criado para o cliente aslam (CPF: 1)
+2025/06/09 19:07:18 - READ: Listagem de pedidos solicitada.
+2025/06/09 19:07:33 - CREATE: Pagamento registrado - Pagamento: R$ 1.0, Método: Dinheiro
+2025/06/09 19:07:48 - READ: Listagem de pedidos solicitada.
+2025/06/09 19:08:01 - CREATE: Pagamento registrado - Pagamento: R$ 350.0, Método: Cartão
+2025/06/09 19:08:04 - READ: Listagem de pedidos solicitada.
+2025/06/09 19:08:14 - CREATE: Pagamento registrado - Pagamento: R$ 140.0, Método: Dinheiro
+2025/06/09 19:08:17 - READ: Listagem de pedidos solicitada.
+2025/06/09 19:10:09 - CREATE: Cliente cadastrado - CPF: 1, Nome: aslam
+2025/06/09 19:10:17 - CREATE: Produto cadastrado - Nome: cheese, Preço: 40.0
+2025/06/09 19:10:29 - CREATE: Pedido criado para o cliente aslam (CPF: 1)
+2025/06/09 19:10:43 - CREATE: Pedido criado para o cliente aslam (CPF: 1)
+2025/06/09 19:10:48 - READ: Listagem de pedidos solicitada.
+2025/06/09 19:10:58 - CREATE: Pagamento registrado - Pagamento: R$ 80.0, Método: Dinheiro
+2025/06/09 19:10:59 - READ: Listagem de pedidos solicitada.
+2025/06/09 19:15:22 - CREATE: Cliente cadastrado - CPF: 1, Nome: aslam
+2025/06/09 19:15:33 - CREATE: Produto cadastrado - Nome: cheese, Preço: 50.0
+2025/06/09 19:15:41 - CREATE: Produto cadastrado - Nome: coca, Preço: 5.0
+2025/06/09 19:15:51 - CREATE: Pedido criado para o cliente aslam (CPF: 1)
+2025/06/09 19:15:59 - CREATE: Pedido criado para o cliente aslam (CPF: 1)
+2025/06/09 19:16:08 - READ: Listagem de pedidos solicitada.
+2025/06/09 19:16:19 - CREATE: Pagamento registrado - Pagamento: R$ 200.0, Método: Dinheiro
+2025/06/09 19:16:21 - READ: Listagem de pedidos solicitada.
