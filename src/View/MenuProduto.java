@@ -96,9 +96,21 @@ public class MenuProduto {
         String novoNome = InputHelper.lerString("Novo nome (deixe em branco para manter \"" + produtoAtual.getNome() + "\"): ");
         float novoPreco = InputHelper.lerFloat("Novo preço (digite -1 para manter R$ " + produtoAtual.getPreco() + "): ");
 
-        // Cria um novo produto com as alterações
-        String nomeFinal = novoNome.trim().isEmpty() ? produtoAtual.getNome() : novoNome.trim();
-        double precoFinal = novoPreco >= 0 ? novoPreco : produtoAtual.getPreco();
+        // verificar se o usuario informou um novo nome
+        String nomeFinal;
+        if (novoNome.trim().isEmpty()) {
+            nomeFinal = produtoAtual.getNome();
+        } else {
+            nomeFinal = novoNome.trim();
+        }
+
+        // verificar se o usuario informou um novo preco
+        double precoFinal;
+        if (novoPreco >= 0) {
+            precoFinal = novoPreco;
+        } else {
+            precoFinal = produtoAtual.getPreco();
+        }
 
         // Verifica se houve alteração
         if (!nomeFinal.equals(produtoAtual.getNome()) || precoFinal != produtoAtual.getPreco()) {
