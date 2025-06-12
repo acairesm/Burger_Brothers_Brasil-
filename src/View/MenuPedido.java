@@ -238,17 +238,20 @@ public class MenuPedido {
             System.out.println(ANSI_YELLOW + "Nenhum pedido cadastrado." + ANSI_RESET);
             return;
         }
+
+        System.out.printf(ANSI_PURPLE + "%-5s %-20s %-15s %-10s%n" + ANSI_RESET, "Nº", "Cliente", "Data", "Valor Total");
+        System.out.println(ANSI_PURPLE + "----------------------------------------------------------" + ANSI_RESET);
+
         for (int i = 0; i < pedidos.size(); i++) {
             Pedido pedido = pedidos.get(i);
-            System.out.println(ANSI_GREEN + "Pedido #" + (i + 1) + ANSI_RESET);
-            System.out.println("Cliente: " + pedido.getCliente().getNome());
-            System.out.println("Data: " + pedido.getData());
-            System.out.println("Itens do Pedido:");
-            for (ItemPedido item : pedido.getItens()) {
-                System.out.println("- " + item.getProduto().getNome() + " (Quantidade: " + item.getQuantidade() + ")");
-            }
-            System.out.println("Valor Total: R$" + String.format("%.2f", pedido.calcularValorTotal()));
-            System.out.println(ANSI_BLUE + "---------------------------------" + ANSI_RESET);
+            String dataFormatada = String.format("%tD", pedido.getData()); // Formata a data
+            double valorTotal = pedido.calcularValorTotal();
+
+            System.out.printf("%-5d %-20s %-15s R$ %-9.2f%n",
+                    i + 1,
+                    pedido.getCliente().getNome(),
+                    dataFormatada,
+                    valorTotal);
         }
     }
 

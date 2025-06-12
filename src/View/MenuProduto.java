@@ -69,8 +69,12 @@ public class MenuProduto {
             return;
         }
         System.out.println(ANSI_BLUE + "--------- Lista de Produtos ---------" + ANSI_RESET);
+        System.out.printf(ANSI_PURPLE + "%-5s %-20s %-10s%n" + ANSI_RESET, "Nº", "Nome", "Preço");
+        System.out.println(ANSI_PURPLE + "------------------------------------------" + ANSI_RESET);
+
         for (int i = 0; i < produtos.size(); i++) {
-            System.out.println((i + 1) + ". " + produtos.get(i));
+            Produto produto = produtos.get(i);
+            System.out.printf("%-5d %-20s R$ %-9.2f%n", i + 1, produto.getNome(), produto.getPreco());
         }
     }
 
