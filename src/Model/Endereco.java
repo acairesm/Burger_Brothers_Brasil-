@@ -2,6 +2,7 @@ package Model;
 import java.io.Serializable;
 
 public class Endereco implements Serializable{
+
     private String rua;
     private String numero;
     private String cidade;

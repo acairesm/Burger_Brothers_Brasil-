@@ -8,6 +8,7 @@ import Model.Cliente;
 import Model.ItemPedido;
 import Model.Produto;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -151,8 +152,19 @@ public class MenuPedido {
         }
 
         System.out.println(ANSI_YELLOW + "Pedidos existentes:" + ANSI_RESET);
-         for (int i = 0; i < pedidos.size(); i++) {
-            System.out.println("[" + (i + 1) + "] " + pedidos.get(i));
+        System.out.printf(ANSI_PURPLE + "%-5s %-20s %-15s %-10s%n" + ANSI_RESET, "Nº", "Cliente", "Data", "Valor Total");
+        System.out.println(ANSI_PURPLE + "----------------------------------------------------------" + ANSI_RESET);
+
+        for (int i = 0; i < pedidos.size(); i++) {
+            Pedido pedido = pedidos.get(i);
+            String dataFormatada = new SimpleDateFormat("dd/MM").format(pedido.getData());
+            double valorTotal = pedido.calcularValorTotal();
+
+            System.out.printf("%-5d %-20s %-15s R$ %-9.2f%n",
+                    i + 1,
+                    pedido.getCliente().getNome(),
+                    dataFormatada,
+                    valorTotal);
         }
 
         int indicePedido = InputHelper.lerInt("Digite o número do pedido que deseja alterar: ") - 1;
@@ -167,7 +179,20 @@ public class MenuPedido {
         int opcaoAlteracao;
         do {
             System.out.println(ANSI_BLUE + "\nAlterando Pedido de: " + pedidoParaAlterar.getCliente().getNome() + ANSI_RESET);
-            System.out.println(pedidoParaAlterar.toString());
+            System.out.println("Itens atuais do pedido:");
+            List<ItemPedido> itensPedido = pedidoParaAlterar.getItens();
+
+            if (itensPedido.isEmpty()) {
+                System.out.println(ANSI_YELLOW + "Nenhum item no pedido." + ANSI_RESET);
+            } else {
+                System.out.printf(ANSI_PURPLE + "%-5s %-25s %-10s%n" + ANSI_RESET, "Nº", "Produto", "Quantidade");
+                System.out.println(ANSI_PURPLE + "------------------------------------------" + ANSI_RESET);
+                for (int i = 0; i < itensPedido.size(); i++) {
+                    ItemPedido item = itensPedido.get(i);
+                    System.out.printf("%-5d %-25s %-10d%n", i + 1, item.getProduto().getNome(), item.getQuantidade());
+                }
+            }
+
             System.out.println(ANSI_GREEN + "[1] Adicionar Item" + ANSI_RESET);
             System.out.println(ANSI_RED + "[2] Remover Item" + ANSI_RESET);
             System.out.println(ANSI_YELLOW + "[0] Concluir Alterações" + ANSI_RESET);
@@ -181,11 +206,13 @@ public class MenuPedido {
                         break;
                     }
                     System.out.println(ANSI_YELLOW + "\nProdutos disponíveis para adicionar:" + ANSI_RESET);
+                    System.out.printf(ANSI_PURPLE + "%-5s %-25s %-10s%n" + ANSI_RESET, "Nº", "Nome", "Preço");
+                    System.out.println(ANSI_PURPLE + "------------------------------------------" + ANSI_RESET);
                     for (int i = 0; i < produtosDisponiveis.size(); i++) {
-                        System.out.println("[" + (i + 1) + "] " + produtosDisponiveis.get(i));
+                        Produto produto = produtosDisponiveis.get(i);
+                        System.out.printf("%-5d %-25s R$ %-9.2f%n", i + 1, produto.getNome(), produto.getPreco());
                     }
                     int indiceProdutoAdd = InputHelper.lerInt("Escolha o número do produto: ") - 1;
-
                     if (indiceProdutoAdd < 0 || indiceProdutoAdd >= produtosDisponiveis.size()) {
                         System.out.println(ANSI_RED + "Seleção de produto inválida." + ANSI_RESET);
                         break;
@@ -202,34 +229,30 @@ public class MenuPedido {
                     break;
 
                 case 2:
-                    List<ItemPedido> itensNoPedido = pedidoParaAlterar.getItens();
-                    if (itensNoPedido.isEmpty()) {
+                    if (itensPedido.isEmpty()) {
                         System.out.println(ANSI_YELLOW + "O pedido não possui itens para remover." + ANSI_RESET);
                         break;
                     }
-                    System.out.println(ANSI_YELLOW + "\nItens no pedido:" + ANSI_RESET);
-                    for (int i = 0; i < itensNoPedido.size(); i++) {
-                        System.out.println("[" + (i + 1) + "] " + itensNoPedido.get(i));
-                    }
                     int indiceItemRemover = InputHelper.lerInt("Escolha o número do item para remover: ") - 1;
-
-                    if (indiceItemRemover < 0 || indiceItemRemover >= itensNoPedido.size()) {
+                    if (indiceItemRemover < 0 || indiceItemRemover >= itensPedido.size()) {
                         System.out.println(ANSI_RED + "Seleção de item inválida." + ANSI_RESET);
                         break;
                     }
-                    itensNoPedido.remove(indiceItemRemover);
+                    itensPedido.remove(indiceItemRemover);
                     System.out.println(ANSI_GREEN + "Item removido do pedido." + ANSI_RESET);
                     break;
 
                 case 0:
                     System.out.println(ANSI_GREEN + "Alterações concluídas." + ANSI_RESET);
                     break;
+
                 default:
                     System.out.println(ANSI_RED + "Opção de alteração inválida!" + ANSI_RESET);
             }
         } while (opcaoAlteracao != 0);
-         System.out.println(ANSI_GREEN + "Pedido atualizado com sucesso!" + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "Pedido atualizado com sucesso!" + ANSI_RESET);
     }
+
 
     private static void listarPedidos() {
         System.out.println(ANSI_BLUE + "--------- Lista de Pedidos ---------" + ANSI_RESET);
@@ -238,21 +261,23 @@ public class MenuPedido {
             System.out.println(ANSI_YELLOW + "Nenhum pedido cadastrado." + ANSI_RESET);
             return;
         }
+
+        System.out.printf(ANSI_PURPLE + "%-5s %-20s %-15s %-10s%n" + ANSI_RESET, "Nº", "Cliente", "Data", "Valor Total");
+        System.out.println(ANSI_PURPLE + "----------------------------------------------------------" + ANSI_RESET);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM");
+
         for (int i = 0; i < pedidos.size(); i++) {
             Pedido pedido = pedidos.get(i);
-            System.out.println(ANSI_GREEN + "Pedido #" + (i + 1) + ANSI_RESET);
-            System.out.println("Cliente: " + pedido.getCliente().getNome());
-            System.out.println("Data: " + pedido.getData());
-            System.out.println("Itens do Pedido:");
-            for (ItemPedido item : pedido.getItens()) {
-                System.out.println("- " + item.getProduto().getNome() + " (Quantidade: " + item.getQuantidade() + ")");
-            }
-            System.out.println("Valor Total: R$" + String.format("%.2f", pedido.calcularValorTotal()));
-            System.out.println(ANSI_BLUE + "---------------------------------" + ANSI_RESET);
+            String dataFormatada = sdf.format(pedido.getData());
+            double valorTotal = pedido.calcularValorTotal();
+
+            System.out.printf("%-5d %-20s %-15s R$ %-9.2f%n",
+                    i + 1,
+                    pedido.getCliente().getNome(),
+                    dataFormatada,
+                    valorTotal);
         }
     }
-
-
-
 
 }

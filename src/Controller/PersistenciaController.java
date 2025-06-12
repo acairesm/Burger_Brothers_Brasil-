@@ -12,12 +12,10 @@ import java.util.List;
 
 public class PersistenciaController {
 
-
     private static final String ARQUIVO_CLIENTES = "clientes.dat";
     private static final String ARQUIVO_PRODUTOS = "produtos.dat";
     private static final String ARQUIVO_PEDIDOS = "pedidos.dat";
     private static final String ARQUIVO_PAGAMENTOS = "pagamentos.dat";
-
 
     public static void salvarDados() {
         salvarObjeto(ClienteController.listarClientes(), ARQUIVO_CLIENTES);

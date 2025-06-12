@@ -6,6 +6,7 @@ import java.util.List;
 import java.io.Serializable;
 
 public class Cliente extends Pessoa implements Serializable{
+
     private List<Pedido> historicoPedidos;
 
     public Cliente(String cpf,String nome, String telefone, Endereco endereco) {

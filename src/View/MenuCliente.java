@@ -52,32 +52,31 @@ public class MenuCliente {
         String estado = InputHelper.lerString("Estado: ");
 
         Endereco endereco = new Endereco(rua, numero, cidade, estado);
-        Cliente cliente = new Cliente(cpf,nome, telefone, endereco);
+        Cliente cliente = new Cliente(cpf, nome, telefone, endereco);
         ClienteController.cadastrarCliente(cliente);
     }
 
     private static void listarClientes() {
-        System.out.println("\n" + ANSI_BLUE + "--------- Lista de Clientes ---------" + ANSI_RESET);
+        System.out.println(ANSI_BLUE + "--------- Lista de Clientes ---------" + ANSI_RESET);
         List<Cliente> clientes = ClienteController.listarClientes();
         if (clientes.isEmpty()) {
             System.out.println(ANSI_RED + "Nenhum cliente registrado." + ANSI_RESET);
             return;
         }
+        System.out.printf(ANSI_PURPLE + "%-5s %-20s %-15s %-15s %-15s%n" + ANSI_RESET, "Nº", "Nome", "CPF", "Telefone", "Endereço");
+        System.out.println(ANSI_PURPLE + "---------------------------------------------------------------" + ANSI_RESET);
+
         for (int i = 0; i < clientes.size(); i++) {
             Cliente cliente = clientes.get(i);
-            System.out.println(ANSI_CYAN + "Cliente #" + (i + 1) + ANSI_RESET);
-            System.out.println(ANSI_GREEN + "Nome: " + ANSI_RESET + cliente.getNome());
-            System.out.println(ANSI_GREEN + "CPF: " + ANSI_RESET + cliente.getCpf());
-            System.out.println(ANSI_GREEN + "Telefone: " + ANSI_RESET + cliente.getTelefone());
-
             Endereco e = cliente.getEndereco();
-            String enderecoFormatado = String.format("%s, %s, %s , %s", e.getRua(), e.getNumero(), e.getCidade(), e.getEstado());
-            System.out.println(ANSI_GREEN + "Endereço: " + ANSI_RESET + enderecoFormatado);
+            String enderecoFormatado = String.format("%s, %s, %s, %s", e.getRua(), e.getNumero(), e.getCidade(), e.getEstado());
 
-            int quantidadePedidos = cliente.getHistoricoPedidos().size();
-            System.out.println(ANSI_GREEN + "Pedidos realizados: " + ANSI_RESET + quantidadePedidos);
-
-            System.out.println(ANSI_BLUE + "-------------------------------------" + ANSI_RESET);
+            System.out.printf("%-5d %-20s %-15s %-15s %-15s%n",
+                    i + 1,
+                    cliente.getNome(),
+                    cliente.getCpf(),
+                    cliente.getTelefone(),
+                    enderecoFormatado);
         }
     }
 
@@ -100,17 +99,20 @@ public class MenuCliente {
                     break;
                 }
             }
-            if (clienteEncontrado== null){
+            if (clienteEncontrado == null) {
                 System.out.println(ANSI_RED + "Cliente não encontrado... Digite um CPF existente! " + ANSI_RESET);
             }
         }
-        System.out.println("Qual informação você quer editar:");
-        System.out.println("[1] - Nome");
-        System.out.println("[2] - Telefone");
-        System.out.println("[3] - Endereço -> Rua");
-        System.out.println("[4] - Endereço -> Número");
-        System.out.println("[5] - Endereço -> Cidade");
-        System.out.println("[6] - Endereço -> Estado");
+
+        System.out.println(ANSI_YELLOW + "Qual informação você quer editar:" + ANSI_RESET);
+        System.out.printf(ANSI_PURPLE + "%-5s %-25s%n" + ANSI_RESET, "Opção", "Descrição");
+        System.out.println(ANSI_PURPLE + "------------------------------------------" + ANSI_RESET);
+        System.out.printf("%-5d %-25s%n", 1, "Nome");
+        System.out.printf("%-5d %-25s%n", 2, "Telefone");
+        System.out.printf("%-5d %-25s%n", 3, "Endereço -> Rua");
+        System.out.printf("%-5d %-25s%n", 4, "Endereço -> Número");
+        System.out.printf("%-5d %-25s%n", 5, "Endereço -> Cidade");
+        System.out.printf("%-5d %-25s%n", 6, "Endereço -> Estado");
 
         int op = InputHelper.lerInt("Digite a opção: ");
 
@@ -144,7 +146,6 @@ public class MenuCliente {
             default -> System.out.println(ANSI_RED + "Opção inválida!" + ANSI_RESET);
         }
     }
-
 
 }
 
