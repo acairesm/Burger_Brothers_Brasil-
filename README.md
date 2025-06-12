@@ -89,10 +89,10 @@ A utilização da IA visou acelerar o desenvolvimento, reforçar boas práticas 
 
 ## 👥 Autores
 
-- [**Lorenzo Garcia Pedrozo**](https://github.com/LoPedrozo) – Organização Geral de Todas as Classes do Projeto, melhorias na interface dos menus e Criação do README
-- [**André Caires**](https://github.com/acairesm) – Módulo Produto, Pagamento, Criação do InputHelper(ambos) e Correções de Bugs no Sistema
-- [**Aslam Rekik**](https://github.com/aslamrekik) – Módulo Cliente, Menu Principal, Criação do InputHelper(ambos) e Correções de Bugs no Sistema
-- [**Leonardo Herédia**](https://github.com/LeoHeredia2004) – Logs, Salvamentos em arquivos e Módulo Pedidos
+- [**Lorenzo Garcia Pedrozo**](https://github.com/LoPedrozo) – Organização Geral de Todas as Classes do Projeto, melhorias na interface dos menus e Criação do README.
+- [**André Caires**](https://github.com/acairesm) – Módulo Produto, Pagamento, Criação do InputHelper(ambos) e Correções de Bugs no Sistema.
+- [**Aslam Rekik**](https://github.com/aslamrekik) – Módulo Cliente, Menu Principal, Criação do InputHelper(ambos) e Correções de Bugs no Sistema.
+- [**Leonardo Herédia**](https://github.com/LeoHeredia2004) – Logs, Salvamentos em arquivos e Módulo Pedidos.
 
 ---
 
