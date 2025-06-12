@@ -44,4 +44,20 @@ public class InputHelper {
         boolean valor = false;
         return valor;
     }
+
+    public static char lerChar(String texto) {
+        char caractere = ' ';
+        boolean valido = false;
+        do {
+            System.out.print(texto);
+            String entrada = scanner.nextLine();
+            if (entrada.length() == 1) {
+                caractere = entrada.charAt(0);
+                valido = true;
+            } else {
+                System.out.println("Digite apenas um caractere.");
+            }
+        } while (!valido);
+        return caractere;
+    }
 }

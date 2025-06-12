@@ -138,3 +138,81 @@
 2025/06/11 21:27:21 - READ: Listagem de pagamentos solicitada.
 2025/06/11 21:27:21 - READ: Listagem de pagamentos solicitada.
 2025/06/11 21:27:38 - READ: Listagem de pagamentos solicitada.
+2025/06/11 21:46:09 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:46:09 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:46:09 - READ: Listagem de pagamentos solicitada.
+2025/06/11 21:46:09 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:07:58 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:07:58 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:07:58 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:07:58 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:08:03 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:08:08 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:08:30 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:14:29 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:14:29 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:14:29 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:14:29 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:14:35 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:14:39 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:14:39 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:14:44 - DELETE: Pagamento reembolsado e removido - Pagamento: R$ 14.0, Método: Dinheiro
+2025/06/11 22:15:10 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:15:10 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:15:12 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:15:16 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:19:49 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:19:49 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:19:49 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:19:49 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:20:04 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:20:09 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:21:18 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:21:18 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:21:18 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:21:18 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:21:36 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:22:09 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:22:09 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:22:09 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:22:09 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:22:21 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:22:53 - CREATE: Pagamento registrado - Pagamento: R$ 1.0, Método: Cartão
+2025/06/11 22:23:31 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:23:31 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:23:31 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:23:31 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:23:48 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:23:57 - CREATE: Pagamento registrado - Pagamento: R$ 14.0, Método: Dinheiro
+2025/06/11 22:24:01 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:24:06 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:24:06 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:24:26 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:24:26 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:24:29 - DELETE: Pagamento reembolsado - Pagamento: R$ 14.0, Método: Dinheiro
+2025/06/11 22:24:32 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:24:43 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:24:43 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:24:43 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:24:43 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:25:12 - CREATE: Pedido criado para o cliente lorenzo (CPF: 14133304950)
+2025/06/11 22:25:14 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:25:25 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:25:49 - CREATE: Pagamento registrado - Pagamento: R$ 24.0, Método: Cartão
+2025/06/11 22:26:12 - CREATE: Cliente cadastrado - CPF: 2, Nome: a
+2025/06/11 22:26:29 - CREATE: Pedido criado para o cliente a (CPF: 2)
+2025/06/11 22:26:34 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:26:48 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:37:47 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:37:47 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:37:47 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:37:47 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:37:52 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:37:55 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:38:28 - CREATE: Pagamento registrado - Pagamento: R$ 14.0, Método: Cartão
+2025/06/11 22:38:39 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:38:45 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:38:45 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:39:23 - CREATE: Pedido criado para o cliente lorenzo (CPF: 14133304950)
+2025/06/11 22:39:43 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:39:53 - CREATE: Pagamento registrado - Pagamento: R$ 10.0, Método: Dinheiro
