@@ -244,7 +244,7 @@ public class MenuPedido {
 
         for (int i = 0; i < pedidos.size(); i++) {
             Pedido pedido = pedidos.get(i);
-            String dataFormatada = String.format("%tD", pedido.getData()); // Formata a data
+            String dataFormatada = String.format("%tD", pedido.getData());
             double valorTotal = pedido.calcularValorTotal();
 
             System.out.printf("%-5d %-20s %-15s R$ %-9.2f%n",
