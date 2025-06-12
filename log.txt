@@ -280,3 +280,7 @@
 2025/06/11 23:22:04 - READ: Listagem de pagamentos solicitada.
 2025/06/11 23:22:25 - DELETE: Pagamento reembolsado - Pagamento: R$ 14.0, Método: Cartão
 2025/06/11 23:22:39 - READ: Listagem de pagamentos solicitada.
+2025/06/11 23:52:21 - READ: Listagem de pedidos solicitada.
+2025/06/11 23:52:21 - READ: Listagem de pedidos solicitada.
+2025/06/11 23:52:21 - READ: Listagem de pagamentos solicitada.
+2025/06/11 23:52:21 - READ: Listagem de pagamentos solicitada.
