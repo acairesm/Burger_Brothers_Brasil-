@@ -52,7 +52,7 @@ public class MenuCliente {
         String estado = InputHelper.lerString("Estado: ");
 
         Endereco endereco = new Endereco(rua, numero, cidade, estado);
-        Cliente cliente = new Cliente(cpf,nome, telefone, endereco);
+        Cliente cliente = new Cliente(cpf, nome, telefone, endereco);
         ClienteController.cadastrarCliente(cliente);
     }
 
@@ -99,17 +99,20 @@ public class MenuCliente {
                     break;
                 }
             }
-            if (clienteEncontrado== null){
+            if (clienteEncontrado == null) {
                 System.out.println(ANSI_RED + "Cliente não encontrado... Digite um CPF existente! " + ANSI_RESET);
             }
         }
-        System.out.println("Qual informação você quer editar:");
-        System.out.println("[1] - Nome");
-        System.out.println("[2] - Telefone");
-        System.out.println("[3] - Endereço -> Rua");
-        System.out.println("[4] - Endereço -> Número");
-        System.out.println("[5] - Endereço -> Cidade");
-        System.out.println("[6] - Endereço -> Estado");
+
+        System.out.println(ANSI_YELLOW + "Qual informação você quer editar:" + ANSI_RESET);
+        System.out.printf(ANSI_PURPLE + "%-5s %-25s%n" + ANSI_RESET, "Opção", "Descrição");
+        System.out.println(ANSI_PURPLE + "------------------------------------------" + ANSI_RESET);
+        System.out.printf("%-5d %-25s%n", 1, "Nome");
+        System.out.printf("%-5d %-25s%n", 2, "Telefone");
+        System.out.printf("%-5d %-25s%n", 3, "Endereço -> Rua");
+        System.out.printf("%-5d %-25s%n", 4, "Endereço -> Número");
+        System.out.printf("%-5d %-25s%n", 5, "Endereço -> Cidade");
+        System.out.printf("%-5d %-25s%n", 6, "Endereço -> Estado");
 
         int op = InputHelper.lerInt("Digite a opção: ");
 
@@ -143,7 +146,5 @@ public class MenuCliente {
             default -> System.out.println(ANSI_RED + "Opção inválida!" + ANSI_RESET);
         }
     }
-
-
 }
 
