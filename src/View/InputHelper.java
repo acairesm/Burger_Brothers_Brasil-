@@ -41,10 +41,6 @@ public class InputHelper {
         return num;
     }
 
-    public static boolean lerBoolean(String texto) {
-        boolean valor = false;
-        return valor;
-    }
 
     public static char lerChar(String texto) {
         char caractere = ' ';

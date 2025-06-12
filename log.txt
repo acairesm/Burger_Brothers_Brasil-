@@ -311,3 +311,53 @@
 2025/06/12 08:44:31 - READ: Listagem de pagamentos solicitada.
 2025/06/12 08:44:41 - READ: Listagem de pedidos solicitada.
 2025/06/12 08:45:11 - READ: Listagem de pagamentos solicitada.
+2025/06/12 08:54:07 - READ: Listagem de pedidos solicitada.
+2025/06/12 08:54:07 - READ: Listagem de pedidos solicitada.
+2025/06/12 08:54:07 - READ: Listagem de pagamentos solicitada.
+2025/06/12 08:54:07 - READ: Listagem de pagamentos solicitada.
+2025/06/12 08:55:31 - UPDATE: Produto editado - Índice: 2, Novo Nome: Batata Frita
+2025/06/12 08:55:43 - READ: Listagem de pedidos solicitada.
+2025/06/12 08:56:00 - READ: Listagem de pedidos solicitada.
+2025/06/12 08:56:37 - READ: Listagem de pedidos solicitada.
+2025/06/12 08:56:54 - CREATE: Pedido criado para o cliente Lorenzo (CPF: 2)
+2025/06/12 08:57:04 - READ: Listagem de pedidos solicitada.
+2025/06/12 08:57:37 - CREATE: Pedido criado para o cliente Aslam (CPF: 1)
+2025/06/12 08:57:41 - READ: Listagem de pedidos solicitada.
+2025/06/12 08:57:56 - READ: Listagem de pedidos solicitada.
+2025/06/12 08:58:36 - CREATE: Pagamento registrado - Pagamento: R$ 60.0, Método: Cartão, Pedido Cliente: Lorenzo, Status do Pedido: PENDENTE
+2025/06/12 08:58:43 - READ: Listagem de pagamentos solicitada.
+2025/06/12 08:59:05 - READ: Listagem de pedidos solicitada.
+2025/06/12 08:59:16 - CREATE: Pagamento registrado - Pagamento: R$ 24.0, Método: Dinheiro, Pedido Cliente: Aslam, Status do Pedido: PENDENTE
+2025/06/12 08:59:18 - READ: Listagem de pagamentos solicitada.
+2025/06/12 08:59:27 - READ: Listagem de pagamentos solicitada.
+2025/06/12 08:59:27 - READ: Listagem de pagamentos solicitada.
+2025/06/12 08:59:37 - DELETE: Pagamento reembolsado - Pagamento: R$ 24.0, Método: Dinheiro, Pedido Cliente: Aslam, Status do Pedido: REEMBOLSADO
+2025/06/12 08:59:39 - READ: Listagem de pagamentos solicitada.
+2025/06/12 08:59:41 - READ: Listagem de pedidos solicitada.
+2025/06/12 08:59:56 - READ: Listagem de pedidos solicitada.
+2025/06/12 08:59:56 - READ: Listagem de pagamentos solicitada.
+2025/06/12 09:05:29 - READ: Listagem de pedidos solicitada.
+2025/06/12 09:05:29 - READ: Listagem de pedidos solicitada.
+2025/06/12 09:05:29 - READ: Listagem de pagamentos solicitada.
+2025/06/12 09:05:29 - READ: Listagem de pagamentos solicitada.
+2025/06/12 09:06:31 - CREATE: Pedido criado para o cliente Lorenzo (CPF: 2)
+2025/06/12 09:06:34 - READ: Listagem de pedidos solicitada.
+2025/06/12 09:06:56 - READ: Listagem de pedidos solicitada.
+2025/06/12 09:07:06 - CREATE: Pagamento registrado - Pagamento: R$ 120.0, Método: Dinheiro, Pedido Cliente: Lorenzo, Status do Pedido: PENDENTE
+2025/06/12 09:07:10 - READ: Listagem de pagamentos solicitada.
+2025/06/12 09:07:26 - READ: Listagem de pagamentos solicitada.
+2025/06/12 09:07:26 - READ: Listagem de pagamentos solicitada.
+2025/06/12 09:07:30 - DELETE: Pagamento reembolsado - Pagamento: R$ 120.0, Método: Dinheiro, Pedido Cliente: Lorenzo, Status do Pedido: REEMBOLSADO
+2025/06/12 09:07:32 - READ: Listagem de pedidos solicitada.
+2025/06/12 09:07:34 - READ: Listagem de pagamentos solicitada.
+2025/06/12 09:08:21 - CREATE: Produto cadastrado - Nome: x, Preço: 12.0
+2025/06/12 09:08:29 - READ: Listagem de pedidos solicitada.
+2025/06/12 09:08:29 - READ: Listagem de pagamentos solicitada.
+2025/06/12 09:27:36 - READ: Listagem de pedidos solicitada.
+2025/06/12 09:27:36 - READ: Listagem de pedidos solicitada.
+2025/06/12 09:27:36 - READ: Listagem de pagamentos solicitada.
+2025/06/12 09:27:36 - READ: Listagem de pagamentos solicitada.
+2025/06/12 09:41:39 - READ: Listagem de pedidos solicitada.
+2025/06/12 09:41:39 - READ: Listagem de pedidos solicitada.
+2025/06/12 09:41:39 - READ: Listagem de pagamentos solicitada.
+2025/06/12 09:41:39 - READ: Listagem de pagamentos solicitada.
