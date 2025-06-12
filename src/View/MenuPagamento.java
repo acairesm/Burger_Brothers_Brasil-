@@ -83,7 +83,7 @@ public class MenuPagamento {
         Pagamento pagamento;
         if (metodo == 'C' || metodo == 'c') {
             pagamento = new PagamentoCartao(valor);
-        } else { // 'D' or 'd'
+        } else {
             pagamento = new PagamentoDinheiro(valor);
         }
 
