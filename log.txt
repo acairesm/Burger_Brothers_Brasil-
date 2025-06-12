@@ -216,3 +216,17 @@
 2025/06/11 22:39:23 - CREATE: Pedido criado para o cliente lorenzo (CPF: 14133304950)
 2025/06/11 22:39:43 - READ: Listagem de pedidos solicitada.
 2025/06/11 22:39:53 - CREATE: Pagamento registrado - Pagamento: R$ 10.0, Método: Dinheiro
+2025/06/11 22:46:34 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:50:10 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:50:10 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:50:10 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:50:10 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:50:15 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:50:27 - CREATE: Pagamento registrado - Pagamento: R$ 14.0, Método: Dinheiro
+2025/06/11 22:56:13 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:56:13 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:56:13 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:56:13 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:56:17 - READ: Listagem de pagamentos solicitada.
+2025/06/11 22:56:18 - READ: Listagem de pedidos solicitada.
+2025/06/11 22:56:25 - CREATE: Pagamento registrado - Pagamento: R$ 14.0, Método: Cartão
