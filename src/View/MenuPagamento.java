@@ -31,7 +31,7 @@ public class MenuPagamento {
                 case 1 -> processarPagamento();
                 case 2 -> listarPagamentos();
                 case 3 -> reembolsarPagamento();
-                case 0 -> System.out.println(ANSI_BLUE + "Voltando ao menu principal..." + ANSI_RESET);
+                case 0 -> System.out.println(ANSI_GREEN + "Voltando ao menu principal..." + ANSI_RESET);
                 default -> System.out.println(ANSI_RED + "Opção inválida! Tente novamente." + ANSI_RESET);
             }
             System.out.println();
@@ -61,8 +61,8 @@ public class MenuPagamento {
         float valorPedido = (float) pedido.calcularValorTotal();
 
         System.out.println(ANSI_BLUE + "------ Escolha o método de pagamento ------" + ANSI_RESET);
-        System.out.println(ANSI_GREEN + "C - Cartão" + ANSI_RESET);
-        System.out.println(ANSI_GREEN + "D - Dinheiro" + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "[C] - Cartão 💳" + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "[D] - Dinheiro 💵" + ANSI_RESET);
 
         char metodo;
         do {

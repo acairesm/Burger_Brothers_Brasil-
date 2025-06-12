@@ -8,36 +8,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PagamentoController {
+
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_RED = "\u001B[31m";
+
+
     private static List<Pagamento> pagamentos = new ArrayList<>();
 
     public static void adicionarPagamento(Pagamento pagamento) {
         if (pagamento.getValor() <= 0) {
-            System.out.println("Erro: Valor do pagamento deve ser maior que zero.");
+            System.out.println(ANSI_RED + "Erro: Valor do pagamento deve ser maior que zero." + ANSI_RESET);
             return;
         }
         pagamentos.add(pagamento);
         LoggerService.log("CREATE: Pagamento registrado - " + pagamento);
-        System.out.println("Pagamento registrado com sucesso!");
+        System.out.println(ANSI_GREEN + "Pagamento registrado com sucesso!"+ ANSI_RESET);
     }
 
     public static List<Pagamento> listarPagamentos() {
         LoggerService.log("READ: Listagem de pagamentos solicitada.");
-        return new ArrayList<>(pagamentos); // Retorna copia para evitar modificações externas
+        return new ArrayList<>(pagamentos);
     }
 
     public static void removerPagamento(int indice) {
         if (indice < 0 || indice >= pagamentos.size()) {
-            System.out.println("Índice inválido para remoção de pagamento!");
+            System.out.println(ANSI_RED + "Índice inválido para remoção de pagamento!" + ANSI_RESET);
             return;
         }
         Pagamento p = pagamentos.get(indice);
         pagamentos.remove(indice);
-        System.out.println("Pagamento removido com sucesso: " + p);
+        System.out.println(ANSI_GREEN + "Pagamento removido com sucesso: " + p + ANSI_RESET);
     }
 
     public static boolean confirmarReembolso(int indice) {
         if (indice < 0 || indice >= pagamentos.size()) {
-            System.out.println("Índice inválido para reembolso!");
+            System.out.println(ANSI_RED + "Índice inválido para reembolso!"+ ANSI_RESET);
             return false;
         }
         Pagamento p = pagamentos.get(indice);
@@ -47,17 +53,17 @@ public class PagamentoController {
         if (resposta.equalsIgnoreCase("s")) {
             pagamentos.remove(indice);
             LoggerService.log("DELETE: Pagamento reembolsado - " + p);
-            System.out.println("Pagamento reembolsado com sucesso.");
+            System.out.println(ANSI_GREEN + "Pagamento reembolsado com sucesso."+ ANSI_RESET);
             return true;
         } else {
-            System.out.println("Reembolso cancelado.");
+            System.out.println(ANSI_RED + "Reembolso cancelado."+ ANSI_RESET);
             return false;
         }
     }
 
     public static void processarPagamento(Pagamento pagamento) {
         adicionarPagamento(pagamento);
-        if (pagamento.getValor() > 0) { // só processa se valor válido
+        if (pagamento.getValor() > 0) {
             pagamento.processarPagamento();
         }
     }
