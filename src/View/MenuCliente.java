@@ -1,10 +1,8 @@
 package View;
 
 import Controller.ClienteController;
-import Controller.PagamentoController;
 import Model.Cliente;
 import Model.Endereco;
-import Model.Pagamento;
 
 import java.util.List;
 

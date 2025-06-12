@@ -6,9 +6,7 @@ import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-/**
- * Serviço de log para registrar eventos do sistema em um arquivo de texto.
- */
+
 public class LoggerService {
     private static final String LOG_FILE = "log.txt";
     private static final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
@@ -18,6 +16,7 @@ public class LoggerService {
      * A mensagem inclui data e hora.
      * @param message A mensagem a ser registrada.
      */
+
     public static synchronized void log(String message) {
         try (FileWriter fw = new FileWriter(LOG_FILE, true);
              PrintWriter pw = new PrintWriter(fw)) {

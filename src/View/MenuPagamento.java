@@ -4,7 +4,6 @@ import Controller.PagamentoController;
 import Controller.PedidoController;
 import Model.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MenuPagamento {

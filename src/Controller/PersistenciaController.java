@@ -12,15 +12,13 @@ import java.util.List;
 
 public class PersistenciaController {
 
-    // Define os nomes dos arquivos onde os dados serão salvos
+
     private static final String ARQUIVO_CLIENTES = "clientes.dat";
     private static final String ARQUIVO_PRODUTOS = "produtos.dat";
     private static final String ARQUIVO_PEDIDOS = "pedidos.dat";
     private static final String ARQUIVO_PAGAMENTOS = "pagamentos.dat";
 
-    /**
-     * Salva todas as listas de dados dos controladores em seus respectivos arquivos.
-     */
+
     public static void salvarDados() {
         salvarObjeto(ClienteController.listarClientes(), ARQUIVO_CLIENTES);
         salvarObjeto(ProdutoController.listarProdutos(), ARQUIVO_PRODUTOS);
@@ -28,18 +26,16 @@ public class PersistenciaController {
         salvarObjeto(PagamentoController.listarPagamentos(), ARQUIVO_PAGAMENTOS);
     }
 
-    /**
-     * Carrega todas as listas de dados dos arquivos e as popula nos controladores.
-     */
+
     public static void carregarDados() {
     List<Cliente> clientes = (List<Cliente>) carregarObjeto(ARQUIVO_CLIENTES);
     if (clientes != null) {
-        ClienteController.clientes.clear(); // Add this line
+        ClienteController.clientes.clear();
         ClienteController.clientes.addAll(clientes);
     }
 
     List<Produto> produtos = (List<Produto>) carregarObjeto(ARQUIVO_PRODUTOS);
-    if (produtos != null) { // Simplified the condition here for consistency
+    if (produtos != null) {
         ProdutoController.listarProdutos().clear();
         ProdutoController.listarProdutos().addAll(produtos);
     }
@@ -57,7 +53,7 @@ public class PersistenciaController {
     }
 }
 
-    // --- Métodos Auxiliares ---
+
 
     private static void salvarObjeto(Object obj, String nomeArquivo) {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(nomeArquivo))) {
@@ -70,13 +66,13 @@ public class PersistenciaController {
     private static Object carregarObjeto(String nomeArquivo) {
         File arquivo = new File(nomeArquivo);
         if (!arquivo.exists()) {
-            return new ArrayList<>(); // Retorna uma lista vazia se o arquivo não existe
+            return new ArrayList<>();
         }
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(nomeArquivo))) {
             return ois.readObject();
         } catch (IOException | ClassNotFoundException e) {
             System.err.println("Erro ao carregar dados de " + nomeArquivo + ": " + e.getMessage());
-            return new ArrayList<>(); // Retorna lista vazia em caso de erro
+            return new ArrayList<>();
         }
     }
 }

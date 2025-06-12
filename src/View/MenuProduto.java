@@ -96,7 +96,7 @@ public class MenuProduto {
         String novoNome = InputHelper.lerString("Novo nome (deixe em branco para manter \"" + produtoAtual.getNome() + "\"): ");
         float novoPreco = InputHelper.lerFloat("Novo preço (digite -1 para manter R$ " + produtoAtual.getPreco() + "): ");
 
-        // verificar se o usuario informou um novo nome
+
         String nomeFinal;
         if (novoNome.trim().isEmpty()) {
             nomeFinal = produtoAtual.getNome();
@@ -104,7 +104,7 @@ public class MenuProduto {
             nomeFinal = novoNome.trim();
         }
 
-        // verificar se o usuario informou um novo preco
+
         double precoFinal;
         if (novoPreco >= 0) {
             precoFinal = novoPreco;
@@ -112,11 +112,10 @@ public class MenuProduto {
             precoFinal = produtoAtual.getPreco();
         }
 
-        // Verifica se houve alteração
+
         if (!nomeFinal.equals(produtoAtual.getNome()) || precoFinal != produtoAtual.getPreco()) {
             Produto produtoAtualizado;
 
-            // Verifica o tipo do produto e cria um novo objeto correspondente
             if (produtoAtual instanceof Hamburguer) {
                 Hamburguer hamburguer = (Hamburguer) produtoAtual;
                 produtoAtualizado = new Hamburguer(nomeFinal, precoFinal);
@@ -131,7 +130,6 @@ public class MenuProduto {
                 return;
             }
 
-            // Atualiza a lista com o novo produto
             ProdutoController.editarProduto(indice, produtoAtualizado);
             System.out.println(ANSI_GREEN + "Produto editado com sucesso!" + ANSI_RESET);
         } else {

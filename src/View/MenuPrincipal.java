@@ -33,7 +33,7 @@ public class MenuPrincipal {
                 case 0 -> {
                     PersistenciaController.salvarDados();
                     System.out.println(ANSI_GREEN + "Saindo do sistema. Até logo!" + ANSI_RESET);
-                    //Aqui quando o usuario digitar 0 para sair, ele imprime a msg de saida E salva os dados
+
                 }
                 default -> System.out.println(ANSI_RED + "Opção inválida! Tente novamente." + ANSI_RESET);
             }

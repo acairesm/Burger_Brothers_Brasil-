@@ -88,3 +88,53 @@
 2025/06/11 17:44:38 - READ: Listagem de pedidos solicitada.
 2025/06/11 17:44:38 - READ: Listagem de pagamentos solicitada.
 2025/06/11 17:44:38 - READ: Listagem de pagamentos solicitada.
+2025/06/11 21:15:48 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:15:48 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:15:48 - READ: Listagem de pagamentos solicitada.
+2025/06/11 21:15:48 - READ: Listagem de pagamentos solicitada.
+2025/06/11 21:16:45 - CREATE: Cliente cadastrado - CPF: 14133304950, Nome: lorenzo
+2025/06/11 21:17:17 - DELETE: Cliente com CPF 2 deletado.
+2025/06/11 21:17:31 - DELETE: Cliente com CPF 2 deletado.
+2025/06/11 21:17:46 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:17:46 - READ: Listagem de pagamentos solicitada.
+2025/06/11 21:17:51 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:17:51 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:17:51 - READ: Listagem de pagamentos solicitada.
+2025/06/11 21:17:51 - READ: Listagem de pagamentos solicitada.
+2025/06/11 21:18:30 - UPDATE: Cidade do cliente com CPF 14133304950 atualizada.
+2025/06/11 21:19:05 - CREATE: Produto cadastrado - Nome: X-Burguer, Preço: 10.989999771118164
+2025/06/11 21:19:36 - UPDATE: Produto editado - Índice: 0, Novo Nome: X-Burguer
+2025/06/11 21:19:52 - CREATE: Produto cadastrado - Nome: cb, Preço: 1.0
+2025/06/11 21:19:58 - DELETE: Produto deletado - Nome: cb
+2025/06/11 21:20:35 - CREATE: Produto cadastrado - Nome: Coca Cola Zero, Preço: 3.9700000286102295
+2025/06/11 21:20:58 - UPDATE: Produto editado - Índice: 1, Novo Nome: Coca Cola Zero
+2025/06/11 21:21:22 - CREATE: Produto cadastrado - Nome: Porção de Batata Frita, Preço: 25.0
+2025/06/11 21:21:36 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:22:29 - CREATE: Pedido criado para o cliente lorenzo (CPF: 14133304950)
+2025/06/11 21:22:36 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:22:59 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:23:35 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:23:56 - CREATE: Pedido criado para o cliente lorenzo (CPF: 14133304950)
+2025/06/11 21:24:00 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:24:04 - DELETE: Pedido de lorenzo removido.
+2025/06/11 21:24:08 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:24:40 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:25:07 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:25:23 - CREATE: Pagamento registrado - Pagamento: R$ 1.0, Método: Cartão
+2025/06/11 21:25:32 - READ: Listagem de pagamentos solicitada.
+2025/06/11 21:25:41 - READ: Listagem de pagamentos solicitada.
+2025/06/11 21:25:41 - READ: Listagem de pagamentos solicitada.
+2025/06/11 21:25:46 - DELETE: Pagamento reembolsado e removido - Pagamento: R$ 1.0, Método: Cartão
+2025/06/11 21:25:52 - READ: Listagem de pagamentos solicitada.
+2025/06/11 21:25:58 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:26:12 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:26:23 - CREATE: Pagamento registrado - Pagamento: R$ 14.0, Método: Dinheiro
+2025/06/11 21:26:33 - READ: Listagem de pagamentos solicitada.
+2025/06/11 21:26:45 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:27:16 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:27:16 - READ: Listagem de pagamentos solicitada.
+2025/06/11 21:27:21 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:27:21 - READ: Listagem de pedidos solicitada.
+2025/06/11 21:27:21 - READ: Listagem de pagamentos solicitada.
+2025/06/11 21:27:21 - READ: Listagem de pagamentos solicitada.
+2025/06/11 21:27:38 - READ: Listagem de pagamentos solicitada.

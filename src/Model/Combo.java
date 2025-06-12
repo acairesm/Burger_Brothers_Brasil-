@@ -22,7 +22,7 @@ public class Combo extends Produto implements Serializable{
         for (Produto p : produtos) {
             precoTotal += p.getPreco();
         }
-        return precoTotal; // Pode aplicar desconto se necessário
+        return precoTotal;
     }
 
     @Override
