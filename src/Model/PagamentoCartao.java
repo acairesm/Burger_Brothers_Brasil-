@@ -3,6 +3,7 @@ package Model;
 import java.io.Serializable;
 
 public class PagamentoCartao extends Pagamento implements Serializable {
+
     public PagamentoCartao(double valor, Pedido pedido) {
         super(valor, "Cartão", pedido);
     }

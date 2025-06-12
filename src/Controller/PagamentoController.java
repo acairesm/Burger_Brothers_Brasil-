@@ -19,6 +19,7 @@ public class PagamentoController {
 
 
     public static void inicializarPedidosPendentes(List<Pedido> pedidos) {
+
         pedidosPendentes.clear();
         for (Pedido p : pedidos) {
             if (p.getStatus() == Pedido.Status.PENDENTE) {

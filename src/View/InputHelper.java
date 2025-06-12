@@ -3,6 +3,7 @@ package View;
 import java.util.Scanner;
 
 public class InputHelper {
+
     private static Scanner scanner = new Scanner(System.in);
 
     public static int lerInt(String texto) {

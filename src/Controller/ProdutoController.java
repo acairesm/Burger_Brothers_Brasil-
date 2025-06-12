@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProdutoController {
+
     private static List<Produto> produtos = new ArrayList<>();
 
     public static void cadastrarProduto(Produto produto) {

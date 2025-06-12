@@ -2,6 +2,7 @@ package Model;
 import java.io.Serializable;
 
 public class Funcionario extends Pessoa implements Serializable{
+
     private String cargo;
     private String login;
     private String senha;

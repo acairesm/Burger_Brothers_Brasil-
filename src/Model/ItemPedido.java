@@ -2,6 +2,7 @@ package Model;
 import java.io.Serializable;
 
 public class ItemPedido implements Serializable{
+
     private Produto produto;
     private int quantidade;
 

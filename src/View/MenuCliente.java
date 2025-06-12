@@ -146,5 +146,6 @@ public class MenuCliente {
             default -> System.out.println(ANSI_RED + "Opção inválida!" + ANSI_RESET);
         }
     }
+
 }
 

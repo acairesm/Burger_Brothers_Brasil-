@@ -2,6 +2,7 @@ package Model;
 import java.io.Serializable;
 
 public abstract class Produto implements ItemCardapio, Serializable{
+
     protected String nome;
     protected double preco;
     public Produto(String nome, double preco) {

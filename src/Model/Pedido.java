@@ -6,6 +6,7 @@ import java.util.List;
 import java.io.Serializable;
 
 public class Pedido implements Serializable {
+
     public enum Status {
         PENDENTE,
         PAGO,

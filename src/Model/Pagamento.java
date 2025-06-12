@@ -3,6 +3,7 @@ package Model;
 import java.io.Serializable;
 
 public abstract class Pagamento implements Serializable {
+
     protected double valor;
     protected String metodo;
     protected Pedido pedido;
