@@ -2,7 +2,10 @@ package View;
 
 import Controller.PagamentoController;
 import Controller.PedidoController;
-import Model.*;
+import Model.Pagamento;
+import Model.PagamentoCartao;
+import Model.PagamentoDinheiro;
+import Model.Pedido;
 
 import java.util.List;
 
@@ -39,25 +42,28 @@ public class MenuPagamento {
     }
 
     private static void processarPagamento() {
-        System.out.println(ANSI_BLUE + "------ Pedidos disponíveis para pagamento ------" + ANSI_RESET);
-        List<Pedido> pedidos = PedidoController.listarPedidos();
-        if (pedidos.isEmpty()) {
-            System.out.println(ANSI_YELLOW + "Não há pedidos cadastrados no momento." + ANSI_RESET);
+
+        PagamentoController.inicializarPedidosPendentes(PedidoController.listarPedidos());
+        List<Pedido> pedidosPendentes = PagamentoController.listarPedidosPendentes();
+
+        if (pedidosPendentes.isEmpty()) {
+            System.out.println(ANSI_YELLOW + "Não há pedidos pendentes no momento." + ANSI_RESET);
             return;
         }
 
-        for (int i = 0; i < pedidos.size(); i++) {
-            Pedido p = pedidos.get(i);
+        System.out.println(ANSI_BLUE + "------ Pedidos pendentes para pagamento ------" + ANSI_RESET);
+        for (int i = 0; i < pedidosPendentes.size(); i++) {
+            Pedido p = pedidosPendentes.get(i);
             System.out.printf("%d - Cliente: %s | Valor: R$ %.2f%n", i + 1, p.getCliente().getNome(), p.calcularValorTotal());
         }
 
         int indicePedido = InputHelper.lerInt("Escolha o número do pedido que deseja pagar: ") - 1;
-        if (indicePedido < 0 || indicePedido >= pedidos.size()) {
+        if (indicePedido < 0 || indicePedido >= pedidosPendentes.size()) {
             System.out.println(ANSI_RED + "Número inválido! Tente novamente." + ANSI_RESET);
             return;
         }
 
-        Pedido pedido = pedidos.get(indicePedido);
+        Pedido pedido = pedidosPendentes.get(indicePedido);
         float valorPedido = (float) pedido.calcularValorTotal();
 
         System.out.println(ANSI_BLUE + "------ Escolha o método de pagamento ------" + ANSI_RESET);
@@ -72,19 +78,11 @@ public class MenuPagamento {
             }
         } while (metodo != 'C' && metodo != 'D' && metodo != 'c' && metodo != 'd');
 
-        float valor;
-        do {
-            valor = InputHelper.lerFloat("Digite o valor a pagar (R$ " + valorPedido + "): ");
-            if (valor != valorPedido) {
-                System.out.println(ANSI_RED + "Valor inválido! O valor do pedido é R$ " + valorPedido + "." + ANSI_RESET);
-            }
-        } while (valor != valorPedido);
-
         Pagamento pagamento;
         if (metodo == 'C' || metodo == 'c') {
-            pagamento = new PagamentoCartao(valor);
+            pagamento = new PagamentoCartao(valorPedido, pedido);
         } else {
-            pagamento = new PagamentoDinheiro(valor);
+            pagamento = new PagamentoDinheiro(valorPedido, pedido);
         }
 
         PagamentoController.processarPagamento(pagamento);
@@ -97,8 +95,21 @@ public class MenuPagamento {
             System.out.println(ANSI_RED + "Nenhum pagamento registrado." + ANSI_RESET);
             return;
         }
+        System.out.printf(ANSI_PURPLE + "%-5s %-15s %-15s %-12s%n" + ANSI_RESET,
+                "Nº", "Método", "Valor", "Status");
+        System.out.println(ANSI_PURPLE + "------------------------------------------------------" + ANSI_RESET);
         for (int i = 0; i < pagamentos.size(); i++) {
-            System.out.printf("%d. %s%n", i + 1, pagamentos.get(i));
+            Pagamento p = pagamentos.get(i);
+            String status = ANSI_GREEN + "Processado" + ANSI_RESET;
+
+            System.out.printf("%-5d %-15s R$ %-13.2f %-12s%n",
+                    i + 1,
+                    p.getMetodo(),
+                    p.getValor(),
+                    status);
+
+            System.out.println("      Detalhes: " + p.toString());
+            System.out.println();
         }
     }
 
